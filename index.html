@@ -1,13 +1,392 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aecweb</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abilene Electrical Contractors | TECL #17940 | Texas Industrial Power</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@500&display=swap');
+        
+        :root {
+            --aec-yellow: #FFD700; 
+            --aec-red: #FF0000;
+            --aec-blue: #0022FF;
+            --midnight: #050507;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--midnight);
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .heading-font { font-family: 'Barlow Condensed', sans-serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+
+        /* REFINED LOGOTYPE KERNING */
+        .brand-text-white { 
+            letter-spacing: 0.12em; /* Adjusted to prevent "crowding" at the front */
+            font-weight: 900; 
+        }
+        .brand-text-blue { 
+            letter-spacing: -0.02em; 
+            font-weight: 900; 
+        }
+
+        .hero-title {
+            line-height: 0.95;
+            letter-spacing: -0.01em;
+        }
+
+        /* DYNAMIC GRID BACKGROUND */
+        #power-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 50%, #0a0a14 0%, #050507 100%);
+            pointer-events: none;
+        }
+
+        .conduit {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.03);
+            stroke-width: 1px;
+        }
+
+        .pulse {
+            fill: none;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 4px var(--glow-color)) drop-shadow(0 0 12px var(--glow-color));
+            stroke-dasharray: 100, 2500; 
+            animation: flow var(--duration) linear infinite;
+        }
+
+        @keyframes flow {
+            from { stroke-dashoffset: var(--path-length); }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .glass-industrial {
+            background: rgba(8, 8, 12, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-industrial:hover {
+            border-color: var(--aec-yellow);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .btn-aec {
+            background: var(--aec-blue);
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-bottom: 4px solid #0018b3;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn-aec:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 34, 255, 0.3);
+        }
+
+        .crt-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.15;
+        }
+
+        .text-hollow {
+            -webkit-text-stroke: 2px var(--aec-yellow);
+            color: transparent;
+        }
+
+        /* REFINED CROSSHAIR BADGES (Matching Images) */
+        .crosshair-container {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .line-v-yellow {
+            position: absolute;
+            left: 0;
+            top: -20px;
+            bottom: -20px;
+            width: 3px;
+            background-color: var(--aec-yellow);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .line-h-red {
+            position: absolute;
+            left: -40px;
+            right: -60px;
+            top: 50%;
+            height: 3px;
+            background-color: var(--aec-red);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .stat-content {
+            padding-left: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-number {
+            font-size: 6rem;
+            line-height: 0.8;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 900;
+            color: var(--aec-yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="crt-overlay"></div>
+    <svg id="power-bg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 bg-black/95 border-b-2 border-zinc-900 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <!-- LOGO -->
+                <div class="w-14 h-14 rounded-full border-2 border-zinc-600 bg-white flex items-center justify-center overflow-hidden relative shadow-lg">
+                    <div class="absolute inset-0 flex">
+                        <div class="w-1/2 h-full bg-[#0022FF]"></div>
+                        <div class="w-1/2 h-full bg-white flex flex-col">
+                            <div class="h-1/2 w-full bg-white"></div>
+                            <div class="h-1/2 w-full bg-[#CC0000]"></div>
+                        </div>
+                    </div>
+                    <span class="relative z-10 font-black text-white text-[11px] tracking-tighter">AEC</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-black heading-font text-white uppercase leading-none">
+                        <span class="brand-text-white">ABILENE</span> 
+                        <span class="brand-text-blue text-[#0022FF]">ELECTRICAL</span>
+                    </span>
+                    <span class="text-[11px] font-bold text-zinc-500 uppercase tracking-[0.3em] mt-2">CONTRACTORS INC. • TECL #17940</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 font-bold text-[12px] uppercase tracking-wider">
+                <a href="#about" class="text-zinc-400 hover:text-white transition-colors">History</a>
+                <a href="#services" class="text-zinc-400 hover:text-white transition-colors">Services</a>
+                <a href="tel:3252449933" class="bg-[#CC0000] px-8 py-3 text-white hover:scale-105 transition-all shadow-lg">325.244.9933</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center pt-40 pb-20">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-4 bg-white/5 border-l-4 border-[#CC0000] px-5 py-3 mb-10">
+                        <span class="text-[11px] font-black uppercase tracking-[0.25em] text-white">Your Trusted Industrial Solution</span>
+                    </div>
+                    <h1 class="text-6xl lg:text-[110px] font-black heading-font hero-title text-white mb-12 uppercase leading-[0.85]">
+                        POWERING<br>
+                        <span class="text-hollow">TEXAS INDUSTRY</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-zinc-400 max-w-2xl font-light leading-relaxed mb-16">
+                        Reliable electrical services for businesses since 1998. Specialized in large-scale, code-compliant solutions for commercial, industrial, and government entities.
+                    </p>
+                    <div class="flex flex-wrap gap-8">
+                        <a href="#services" class="btn-aec px-14 py-6 text-sm shadow-[0_0_50px_rgba(255,215,0,0.15)]">Deployment Strategy</a>
+                        <div class="flex items-center gap-5 px-8 py-5 bg-zinc-900/80 border border-white/10 backdrop-blur-sm">
+                            <i class="fab fa-tesla text-2xl text-[#CC0000]"></i>
+                            <span class="text-[12px] font-black uppercase tracking-widest text-zinc-300">Certified Installer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Crosshair Status Badges -->
+                <div class="lg:col-span-5 flex flex-col gap-40 lg:pl-16">
+                    <!-- TECL Badge -->
+                    <div class="crosshair-container">
+                        <div class="line-v-yellow"></div>
+                        <div class="line-h-red"></div>
+                        <div class="stat-content">
+                            <span class="stat-label">License Authority</span>
+                            <div class="stat-number heading-font text-white">TECL<br>17940</div>
+                        </div>
+                    </div>
+                    
+                    <!-- EST Badge -->
+                    <div class="crosshair-container">
+                        <div class="line-v-yellow"></div>
+                        <div class="stat-content">
+                            <span class="stat-label" style="color: var(--aec-red);">Operational Status</span>
+                            <div class="stat-number heading-font text-white">EST.<br>1998</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-32 relative z-10 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="p-12 bg-white/[0.02] border border-white/5">
+                    <h3 class="text-4xl font-black heading-font text-white mb-8 uppercase tracking-tight">Our History</h3>
+                    <p class="text-zinc-400 mb-6 leading-relaxed">
+                        In 1998, David Lyles founded Abilene Electrical Contractors with a clear vision: to provide top-quality electrical services with integrity, reliability, and expert craftsmanship.
+                    </p>
+                    <p class="text-zinc-400 leading-relaxed">
+                        What started as a small, locally owned business quickly grew into a trusted name in the industry, built on the principles of quality workmanship, safety, and customer satisfaction.
+                    </p>
+                </div>
+                <div class="space-y-10">
+                    <div class="flex gap-8">
+                        <span class="text-6xl font-black text-white/10 heading-font">01</span>
+                        <div>
+                            <h5 class="text-xl font-bold text-[#FFD700] uppercase mb-2">Central & West TX</h5>
+                            <p class="text-zinc-500">Serving the Texas frontier for over two decades with local expertise.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8">
+                        <span class="text-6xl font-black text-white/10 heading-font">02</span>
+                        <div>
+                            <h5 class="text-xl font-bold text-[#CC0000] uppercase mb-2">Vetted Integrity</h5>
+                            <p class="text-zinc-500">David's original dedication to excellence remains our operating standard today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-40 bg-zinc-950/80 border-y border-zinc-900 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-28">
+                <h2 class="text-7xl lg:text-9xl font-black heading-font text-white uppercase tracking-tight leading-none mb-6">Core <span class="text-[#FFD700]">Services.</span></h2>
+                <p class="mono-font text-[#FFD700] uppercase text-sm tracking-[0.3em]">Critical Infrastructure Support</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="glass-industrial p-12 border-b-4 border-b-[#FFD700]">
+                    <h4 class="text-2xl font-black heading-font text-white uppercase mb-8">Industrial & PLC</h4>
+                    <ul class="space-y-4 text-zinc-400 text-sm mono-font uppercase tracking-wider">
+                        <li class="flex items-start gap-3"><span class="text-[#FFD700]">/</span> Warehouse Upgrades</li>
+                        <li class="flex items-start gap-3"><span class="text-[#FFD700]">/</span> Control Panels & PLC</li>
+                        <li class="flex items-start gap-3"><span class="text-[#FFD700]">/</span> Distribution Centers</li>
+                        <li class="flex items-start gap-3"><span class="text-[#FFD700]">/</span> Medium Voltage Terminations</li>
+                    </ul>
+                </div>
+                <div class="glass-industrial p-12 border-b-4 border-b-[#CC0000]">
+                    <h4 class="text-2xl font-black heading-font text-white uppercase mb-8">Commercial Ops</h4>
+                    <ul class="space-y-4 text-zinc-400 text-sm mono-font uppercase tracking-wider">
+                        <li class="flex items-start gap-3"><span class="text-[#CC0000]">/</span> New Construction</li>
+                        <li class="flex items-start gap-3"><span class="text-[#CC0000]">/</span> Tenant Build-outs</li>
+                        <li class="flex items-start gap-3"><span class="text-[#CC0000]">/</span> Compliance Audits</li>
+                        <li class="flex items-start gap-3"><span class="text-[#CC0000]">/</span> Lighting & Fire Systems</li>
+                    </ul>
+                </div>
+                <div class="glass-industrial p-12 border-b-4 border-b-zinc-600">
+                    <h4 class="text-2xl font-black heading-font text-white uppercase mb-8">Backup & Gov</h4>
+                    <ul class="space-y-4 text-zinc-400 text-sm mono-font uppercase tracking-wider">
+                        <li class="flex items-start gap-3"><span class="text-zinc-600">/</span> Government Maintenance</li>
+                        <li class="flex items-start gap-3"><span class="text-zinc-600">/</span> Powerwall 3 Certified</li>
+                        <li class="flex items-start gap-3"><span class="text-zinc-600">/</span> Industrial Generators</li>
+                        <li class="flex items-start gap-3"><span class="text-zinc-600">/</span> Facility Retrofits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-black border-t-8 border-[#0022FF] pt-40 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-24 mb-32">
+                <div>
+                    <div class="text-[11px] font-black text-[#FFD700] uppercase mb-6 tracking-[0.4em]">Operations Base</div>
+                    <p class="text-3xl font-bold text-zinc-300 heading-font leading-tight">359 Saddle Club Rd<br>Weatherford, TX 76088</p>
+                    <p class="mt-6 text-zinc-500 font-bold mono-font text-xs uppercase">Email: abilene.electrical@gmail.com</p>
+                </div>
+                <div>
+                    <div class="text-[11px] font-black text-[#CC0000] uppercase mb-6 tracking-[0.4em]">Master Direct Line</div>
+                    <a href="tel:3252449933" class="text-6xl lg:text-7xl font-black heading-font text-white hover:text-[#FFD700] transition-colors leading-none">325.244.9933</a>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+                <span class="text-[10px] font-black text-zinc-600 uppercase tracking-[0.3em]">Abilene Electrical Contractors Inc. | TECL #17940 | Copyright &copy; 1998-2026</span>
+                <div class="flex gap-8 text-zinc-500">
+                     <i class="fab fa-facebook-f hover:text-white cursor-pointer transition-colors"></i>
+                     <i class="fab fa-linkedin-in hover:text-white cursor-pointer transition-colors"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const svg = document.getElementById('power-bg');
+        function initGrid() {
+            svg.innerHTML = '';
+            const w = window.innerWidth, h = window.innerHeight, spacing = 200;
+            for (let x = 100; x < w; x += spacing) createLine(x, 0, x, h, Math.random() > 0.5 ? 'yellow' : 'red');
+            for (let y = 100; y < h; y += spacing) createLine(0, y, w, y, Math.random() > 0.5 ? 'yellow' : 'red');
+        }
+        function createLine(x1, y1, x2, y2, color) {
+            const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            const conduit = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            const d = `M${x1},${y1} L${x2},${y2}`;
+            conduit.setAttribute("d", d); conduit.setAttribute("class", "conduit");
+            const pulse = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            pulse.setAttribute("d", d);
+            const length = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+            const colorHex = color === 'yellow' ? '#FFD700' : '#CC0000';
+            const duration = 3 + Math.random() * 4, delay = -Math.random() * 10;
+            pulse.setAttribute("class", "pulse");
+            pulse.style.setProperty('--glow-color', colorHex);
+            pulse.style.setProperty('--path-length', length);
+            pulse.style.setProperty('--duration', `${duration}s`);
+            pulse.style.stroke = colorHex;
+            pulse.style.strokeDasharray = `150, ${length}`; 
+            pulse.style.animationDelay = `${delay}s`;
+            group.appendChild(conduit); group.appendChild(pulse);
+            svg.appendChild(group);
+        }
+        window.addEventListener('resize', initGrid);
+        initGrid();
+    </script>
+</body>
 </html>
