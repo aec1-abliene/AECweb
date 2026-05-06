@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abilene Electrical Contractors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@500&display=swap');
+        
+        :root {
+            --aec-yellow: #FFD700; 
+            --aec-red: #FF0000;
+            --aec-blue: #0022FF;
+            --midnight: #050507;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--midnight);
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .heading-font { font-family: 'Barlow Condensed', sans-serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+
+        .brand-text-white { 
+            letter-spacing: 0.12em; 
+            font-weight: 900; 
+        }
+        .brand-text-blue { 
+            letter-spacing: -0.02em; 
+            font-weight: 900; 
+        }
+
+        #power-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 50%, #0a0a14 0%, #050507 100%);
+            pointer-events: none;
+        }
+
+        .conduit {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.03);
+            stroke-width: 1px;
+        }
+
+        .pulse {
+            fill: none;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 4px var(--glow-color)) drop-shadow(0 0 12px var(--glow-color));
+            stroke-dasharray: 100, 2500; 
+            animation: flow var(--duration) linear infinite;
+        }
+
+        @keyframes flow {
+            from { stroke-dashoffset: var(--path-length); }
+            to { stroke-dashoffset: 0; }
+        }
+
+        .crt-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0.15;
+        }
+
+        /* Basic Blog Article Styling */
+        .glass-article {
+            background: rgba(8, 8, 12, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--aec-blue);
+            transition: all 0.3s ease;
+        }
+        .glass-article:hover {
+            border-color: var(--aec-yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="crt-overlay"></div>
+    <svg id="power-bg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 bg-black/95 border-b-2 border-zinc-900 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <!-- LOGO -->
+                <a href="index.html">
+                    <img src="logo.png" alt="AEC Logo" class="w-16 h-16 rounded-full shadow-lg object-contain bg-white">
+                </a>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-black heading-font text-white uppercase leading-none">
+                        <span class="brand-text-white">ABILENE</span> 
+                        <span class="brand-text-blue text-[#0022FF]">ELECTRICAL</span>
+                    </span>
+                    <span class="text-[11px] font-bold text-zinc-500 uppercase tracking-[0.3em] mt-2">CONTRACTORS INC. • TECL #17940</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 font-bold text-[12px] uppercase tracking-wider">
+                <a href="index.html#about" class="text-zinc-400 hover:text-white transition-colors">History</a>
+                <a href="index.html#services" class="text-zinc-400 hover:text-white transition-colors">Services</a>
+                <a href="blog.html" class="text-white transition-colors border-b-2 border-[#FFD700] pb-1">Blog</a>
+                <a href="tel:3252449933" class="bg-[#CC0000] px-8 py-3 text-white hover:scale-105 transition-all shadow-lg">325.244.9933</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BLOG HEADER -->
+    <header class="relative pt-48 pb-20 border-b border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="inline-flex items-center gap-4 bg-white/5 border-l-4 border-[#0022FF] px-5 py-3 mb-8">
+                <span class="text-[11px] font-black uppercase tracking-[0.25em] text-white">Latest Intelligence</span>
+            </div>
+            <h1 class="text-6xl lg:text-8xl font-black heading-font text-white uppercase leading-[0.85]">
+                Company <span class="text-[#FFD700]">Blog</span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- BLOG CONTENT AREA -->
+    <section class="py-20 relative z-10 min-h-[50vh]">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <!-- Example Placeholder Article -->
+            <article class="glass-article p-8 md:p-12 mb-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[#FFD700] font-bold text-[11px] uppercase tracking-widest mono-font">May 06, 2026</span>
+                    <span class="text-zinc-600">|</span>
+                    <span class="text-zinc-400 font-bold text-[11px] uppercase tracking-widest mono-font">Industrial Tech</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-black heading-font text-white uppercase mb-6 leading-tight">
+                    Welcome to the new Abilene Electrical Contractors Blog
+                </h2>
+                <p class="text-zinc-400 leading-relaxed mb-8 text-lg">
+                    Check back soon for updates, case studies, and insights from the frontier of Texas industrial power and electrical infrastructure.
+                </p>
+                <a href="#" class="inline-block text-[#0022FF] font-black uppercase tracking-widest text-sm hover:text-white transition-colors">
+                    Read More <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-black border-t-8 border-[#0022FF] pt-40 pb-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-24 mb-32">
+                <div>
+                    <div class="text-[11px] font-black text-[#FFD700] uppercase mb-6 tracking-[0.4em]">Operations Base</div>
+                    <p class="text-3xl font-bold text-zinc-300 heading-font leading-tight">359 Saddle Club Rd<br>Weatherford, TX 76088</p>
+                    <p class="mt-6 text-zinc-500 font-bold mono-font text-xs uppercase">Email: abilene.electrical@gmail.com</p>
+                </div>
+                <div>
+                    <div class="text-[11px] font-black text-[#CC0000] uppercase mb-6 tracking-[0.4em]">Master Direct Line</div>
+                    <a href="tel:3252449933" class="text-6xl lg:text-7xl font-black heading-font text-white hover:text-[#FFD700] transition-colors leading-none">325.244.9933</a>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex gap-6 font-bold text-[12px] uppercase tracking-wider">
+                    <a href="index.html" class="text-zinc-500 hover:text-white transition-colors">Home</a>
+                    <a href="blog.html" class="text-zinc-500 hover:text-white transition-colors">Blog</a>
+                </div>
+                <span class="text-[10px] font-black text-zinc-600 uppercase tracking-[0.3em]">Abilene Electrical Contractors Inc. | TECL #17940 | Copyright &copy; 1998-2026</span>
+                <div class="flex gap-8 text-zinc-500">
+                     <i class="fab fa-facebook-f hover:text-white cursor-pointer transition-colors"></i>
+                     <i class="fab fa-linkedin-in hover:text-white cursor-pointer transition-colors"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const svg = document.getElementById('power-bg');
+        function initGrid() {
+            svg.innerHTML = '';
+            const w = window.innerWidth, h = window.innerHeight, spacing = 200;
+            for (let x = 100; x < w; x += spacing) createLine(x, 0, x, h, Math.random() > 0.5 ? 'yellow' : 'red');
+            for (let y = 100; y < h; y += spacing) createLine(0, y, w, y, Math.random() > 0.5 ? 'yellow' : 'red');
+        }
+        function createLine(x1, y1, x2, y2, color) {
+            const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            const conduit = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            const d = `M${x1},${y1} L${x2},${y2}`;
+            conduit.setAttribute("d", d); conduit.setAttribute("class", "conduit");
+            const pulse = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            pulse.setAttribute("d", d);
+            const length = Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1, 2));
+            const colorHex = color === 'yellow' ? '#FFD700' : '#CC0000';
+            const duration = 3 + Math.random() * 4, delay = -Math.random() * 10;
+            pulse.setAttribute("class", "pulse");
+            pulse.style.setProperty('--glow-color', colorHex);
+            pulse.style.setProperty('--path-length', length);
+            pulse.style.setProperty('--duration', `${duration}s`);
+            pulse.style.stroke = colorHex;
+            pulse.style.strokeDasharray = `150, ${length}`; 
+            pulse.style.animationDelay = `${delay}s`;
+            group.appendChild(conduit); group.appendChild(pulse);
+            svg.appendChild(group);
+        }
+        window.addEventListener('resize', initGrid);
+        initGrid();
+    </script>
+</body>
+</html>
