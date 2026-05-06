@@ -6,9 +6,13 @@
     <title>Blog | Abilene Electrical Contractors</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="icon" type="image/png" href="logo.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Barlow+Condensed:wght@700;900&family=JetBrains+Mono:wght@500&display=swap');
         
         :root {
             --aec-yellow: #FFD700; 
@@ -80,18 +84,32 @@
             opacity: 0.15;
         }
 
-        /* Basic Blog Article Styling */
-        .glass-article {
-            background: rgba(8, 8, 12, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-left: 4px solid var(--aec-blue);
-            transition: all 0.3s ease;
+        /* Swiper Customizations */
+        .swiper-wrapper {
+            align-items: stretch;
         }
-        .glass-article:hover {
-            border-color: var(--aec-yellow);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        .swiper-slide {
+            height: auto;
+        }
+        .news-scrollbar {
+            background: rgba(255, 255, 255, 0.1);
+            height: 4px;
+            border-radius: 4px;
+        }
+        .swiper-scrollbar-drag {
+            background: var(--aec-yellow);
+        }
+
+        /* Modal Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: var(--aec-blue);
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -126,38 +144,42 @@
     </nav>
 
     <!-- BLOG HEADER -->
-    <header class="relative pt-48 pb-20 border-b border-zinc-900">
+    <header class="relative pt-48 pb-10">
         <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
             <div class="inline-flex items-center gap-4 bg-white/5 border-l-4 border-[#0022FF] px-5 py-3 mb-8">
                 <span class="text-[11px] font-black uppercase tracking-[0.25em] text-white">Latest Intelligence</span>
             </div>
-            <h1 class="text-6xl lg:text-8xl font-black heading-font text-white uppercase leading-[0.85]">
-                Company <span class="text-[#FFD700]">Blog</span>
-            </h1>
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-zinc-900 pb-10">
+                <h1 class="text-6xl lg:text-8xl font-black heading-font text-white uppercase leading-[0.85]">
+                    Company <span class="text-[#FFD700]">Blog</span>
+                </h1>
+                
+                <!-- Swiper Navigation Arrows -->
+                <div class="flex gap-4">
+                    <button class="news-prev w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#FFD700] hover:text-black transition-all">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="news-next w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#FFD700] hover:text-black transition-all">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- BLOG CONTENT AREA -->
-    <section class="py-20 relative z-10 min-h-[50vh]">
-        <div class="max-w-5xl mx-auto px-6">
+    <section class="py-10 relative z-10 min-h-[50vh] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
             
-            <!-- Example Placeholder Article -->
-            <article class="glass-article p-8 md:p-12 mb-10">
-                <div class="flex items-center gap-4 mb-6">
-                    <span class="text-[#FFD700] font-bold text-[11px] uppercase tracking-widest mono-font">May 06, 2026</span>
-                    <span class="text-zinc-600">|</span>
-                    <span class="text-zinc-400 font-bold text-[11px] uppercase tracking-widest mono-font">Industrial Tech</span>
+            <!-- Swiper Container -->
+            <div class="swiper news-swiper overflow-visible pb-10">
+                <div class="swiper-wrapper" id="news-container">
+                    <!-- Cards injected via JS -->
                 </div>
-                <h2 class="text-3xl md:text-5xl font-black heading-font text-white uppercase mb-6 leading-tight">
-                    Welcome to the new Abilene Electrical Contractors Blog
-                </h2>
-                <p class="text-zinc-400 leading-relaxed mb-8 text-lg">
-                    Check back soon for updates, case studies, and insights from the frontier of Texas industrial power and electrical infrastructure.
-                </p>
-                <a href="#" class="inline-block text-[#0022FF] font-black uppercase tracking-widest text-sm hover:text-white transition-colors">
-                    Read More <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </article>
+                <!-- Scrollbar -->
+                <div class="news-scrollbar mt-12 swiper-scrollbar"></div>
+            </div>
 
         </div>
     </section>
@@ -190,7 +212,59 @@
         </div>
     </footer>
 
+    <!-- SLIDE-OUT MODAL -->
+    <div id="news-modal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-2xl" id="modal-overlay"></div>
+        
+        <!-- Sliding Content Pane -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-[700px] bg-[#050507] border-l border-zinc-800 shadow-2xl transform translate-x-full transition-transform duration-500 ease-out flex flex-col" id="modal-content">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-zinc-900 flex justify-between items-center bg-black/50 backdrop-blur-md z-10">
+                <span class="text-[10px] font-black text-zinc-500 tracking-[0.4em] uppercase mono-font">Intelligence Detail</span>
+                <button class="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#FFD700] hover:text-black hover:border-transparent transition-all" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Body (Scrollable) -->
+            <div class="flex-1 overflow-y-auto p-8 md:p-14 custom-scrollbar">
+                
+                <div class="aspect-video rounded-xl overflow-hidden mb-10 border border-zinc-800 shadow-xl relative bg-black flex items-center justify-center">
+                    <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="flex items-center gap-4 mb-6">
+                    <span id="modal-date" class="text-[#FFD700] font-bold text-[11px] uppercase tracking-widest mono-font"></span>
+                    <span class="text-zinc-700">|</span>
+                    <span id="modal-category" class="text-zinc-500 font-bold text-[11px] uppercase tracking-widest mono-font"></span>
+                </div>
+                
+                <h2 id="modal-title" class="text-3xl md:text-5xl font-black heading-font text-white uppercase mb-8 leading-[1.1]"></h2>
+                
+                <div id="modal-body" class="text-lg text-zinc-300 font-light leading-relaxed space-y-6">
+                    <!-- Article text goes here -->
+                </div>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="p-8 border-t border-zinc-900 bg-black/50">
+                <div class="text-center">
+                    <img src="logo.png" class="w-10 h-10 mx-auto rounded-full bg-white object-contain mb-3 opacity-50" />
+                    <p class="text-[10px] mono-font tracking-[0.3em] text-zinc-600 uppercase mb-2">Abilene Electrical Contractors</p>
+                    <p class="text-[11px] text-zinc-500 italic">Powering Texas Industry</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
+        // Background Grid Logic
         const svg = document.getElementById('power-bg');
         function initGrid() {
             svg.innerHTML = '';
@@ -220,6 +294,117 @@
         }
         window.addEventListener('resize', initGrid);
         initGrid();
+
+        // Blog / News Logic
+        async function initBlog() {
+            try {
+                // Add cache busting query to ensure we always get the latest json
+                const response = await fetch('blog.json?v=' + new Date().getTime());
+                const news = await response.json();
+                const container = document.getElementById('news-container');
+
+                container.innerHTML = news.map((item, index) => `
+                    <div class="swiper-slide h-auto">
+                        <div class="group relative bg-white/5 backdrop-blur-xl border border-zinc-800 rounded-xl overflow-hidden transition-all hover:border-[#0022FF] h-full flex flex-col shadow-2xl">
+                            
+                            <div class="aspect-video overflow-hidden bg-black flex items-center justify-center">
+                                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-hover:opacity-80">
+                            </div>
+                            
+                            <div class="p-8 flex-1 flex flex-col border-t border-zinc-900">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="text-[10px] mono-font text-[#FFD700] tracking-widest uppercase">${item.date}</span>
+                                    <span class="w-1 h-1 rounded-full bg-zinc-600"></span>
+                                    <span class="text-[10px] mono-font text-zinc-500 tracking-widest uppercase truncate">${item.category}</span>
+                                </div>
+                                
+                                <h4 class="text-2xl font-black heading-font uppercase mb-4 leading-tight text-white group-hover:text-[#FFD700] transition-colors">${item.title}</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed mb-8 flex-1">${item.summary}</p>
+                                
+                                <button onclick="openModal(${index})" class="inline-flex items-center gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-white hover:text-[#0022FF] transition-all group-hover:gap-5">
+                                    Read Intel <i class="fas fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="absolute bottom-0 left-0 w-0 h-1 bg-[#0022FF] transition-all duration-500 group-hover:w-full"></div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Global function for modal
+                window.openModal = function(index) {
+                    const item = news[index];
+                    const modal = document.getElementById('news-modal');
+                    const content = document.getElementById('modal-content');
+                    const body = document.getElementById('modal-body');
+                    
+                    document.getElementById('modal-image').src = item.image;
+                    // If image is logo, ensure it's not stretched weirdly, else object-cover
+                    if(item.image.includes('logo.png')) {
+                        document.getElementById('modal-image').classList.replace('object-cover', 'object-contain');
+                        document.getElementById('modal-image').classList.add('p-8');
+                    } else {
+                        document.getElementById('modal-image').classList.replace('object-contain', 'object-cover');
+                        document.getElementById('modal-image').classList.remove('p-8');
+                    }
+                    
+                    document.getElementById('modal-date').innerText = item.date;
+                    document.getElementById('modal-category').innerText = item.category;
+                    document.getElementById('modal-title').innerText = item.title;
+                    
+                    // Convert newlines to paragraphs
+                    body.innerHTML = item.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+
+                    // Show modal logic
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // prevent background scrolling
+                    
+                    // Small delay to allow display block to process before translating
+                    setTimeout(() => {
+                        content.classList.remove('translate-x-full');
+                    }, 10);
+                }
+
+                const closeModal = () => {
+                    const modal = document.getElementById('news-modal');
+                    const content = document.getElementById('modal-content');
+                    
+                    content.classList.add('translate-x-full');
+                    
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = ''; // restore scrolling
+                    }, 500);
+                }
+
+                document.getElementById('close-modal').addEventListener('click', closeModal);
+                document.getElementById('modal-overlay').addEventListener('click', closeModal);
+
+                // Initialize Swiper
+                new Swiper('.news-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.news-next',
+                        prevEl: '.news-prev',
+                    },
+                    scrollbar: {
+                        el: '.news-scrollbar',
+                        draggable: true,
+                    },
+                    breakpoints: {
+                        768: { slidesPerView: 2 },
+                        1280: { slidesPerView: 3 }
+                    }
+                });
+
+            } catch (err) {
+                console.error("Error loading blog data:", err);
+            }
+        }
+
+        // Initialize
+        initBlog();
     </script>
 </body>
 </html>
