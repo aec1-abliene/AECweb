@@ -9,7 +9,7 @@ CacheDisable private /
     Header set Expires 0
 </IfModule>
 
-# FORCE HTTPS AND STRIP WWW
+# FORCE HTTPS AND ADD WWW
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
@@ -17,7 +17,7 @@ CacheDisable private /
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Redirect www to non-www (Modern Canonicalization)
-    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    # Redirect non-www to www (Hostinger CDN Requirement)
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>
