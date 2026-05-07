@@ -2,13 +2,15 @@ name: AECweb Sentinel Daily Briefing
 
 on:
   schedule:
-    # Runs at 08:00 UTC every day, which is 2:00 AM CST (3:00 AM CDT)
-    - cron: '0 8 * * *'
+    # Runs at 08:14 UTC every day, which is 3:14 AM CDT to avoid top-of-the-hour server dropouts
+    - cron: '14 8 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
   run-sentinel:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repository
