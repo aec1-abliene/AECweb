@@ -6,8 +6,8 @@ on:
       - main
       - master
   schedule:
-    # Runs at 08:14 UTC every day, which is 3:14 AM CDT to avoid top-of-the-hour server dropouts
-    - cron: '14 8 * * *'
+    # Runs at 08:14, 16:14, and 22:14 UTC (Approx 3AM, 11AM, 5PM CDT)
+    - cron: '14 8,16,22 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
