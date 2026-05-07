@@ -8,3 +8,16 @@ CacheDisable private /
     Header set Pragma "no-cache"
     Header set Expires 0
 </IfModule>
+
+# FORCE HTTPS AND STRIP WWW
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect www to non-www (Modern Canonicalization)
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
