@@ -97,7 +97,8 @@ def rewrite_story(raw_story):
         "title": "Your new highly engaging, authoritative title",
         "category": "Industrial Tech",
         "summary": "A 1-2 sentence punchy summary",
-        "content": "The full rewritten article, at least 2 paragraphs. Use HTML <br><br> tags for paragraph breaks instead of newlines."
+        "content": "The full rewritten article, at least 2 paragraphs. Use HTML <br><br> tags for paragraph breaks instead of newlines.",
+        "image_prompt": "A 5-8 word descriptive prompt for an AI image generator (e.g., 'industrial power grid dark neon', 'commercial electrical switchgear futuristic')"
     }}
     """
     
@@ -144,6 +145,11 @@ def run_sentinel():
         # Convert <br> tags to standard newlines if Gemini used them
         content = new_post.get("content", "").replace('<br><br>', '\n\n')
         
+        import urllib.parse
+        image_prompt = new_post.get("image_prompt", "industrial electrical power grid futuristic")
+        encoded_prompt = urllib.parse.quote(image_prompt)
+        image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1280&height=720&nologo=true"
+        
         post_entry = {
             "id": new_id,
             "date": today_str,
@@ -152,7 +158,7 @@ def run_sentinel():
             "summary": new_post.get("summary", ""),
             "content": content,
             "original_title": story['original_title'],
-            "image": "logo.png"
+            "image": image_url
         }
         
         blog_data.insert(0, post_entry)
