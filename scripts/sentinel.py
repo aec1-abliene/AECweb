@@ -98,7 +98,7 @@ def rewrite_story(raw_story):
         "category": "Industrial Tech",
         "summary": "A 1-2 sentence punchy summary",
         "content": "The full rewritten article, at least 2 paragraphs. Use HTML <br><br> tags for paragraph breaks instead of newlines.",
-        "image_prompt": "A 5-8 word descriptive prompt for an AI image generator (e.g., 'industrial power grid dark neon', 'commercial electrical switchgear futuristic')"
+        "image_keywords": "A comma-separated list of 2-3 broad keywords for a stock photo (e.g., 'industrial,factory', 'power,grid', 'technology,server')"
     }}
     """
     
@@ -146,9 +146,9 @@ def run_sentinel():
         content = new_post.get("content", "").replace('<br><br>', '\n\n')
         
         import urllib.parse
-        image_prompt = new_post.get("image_prompt", "industrial electrical power grid futuristic")
-        encoded_prompt = urllib.parse.quote(image_prompt)
-        image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1280&height=720&nologo=true"
+        image_keywords = new_post.get("image_keywords", "technology,industrial").replace(' ', '')
+        encoded_keywords = urllib.parse.quote(image_keywords)
+        image_url = f"https://loremflickr.com/1280/720/{encoded_keywords}?lock={new_id}"
         
         post_entry = {
             "id": new_id,
