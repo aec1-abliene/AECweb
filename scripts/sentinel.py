@@ -1,9 +1,9 @@
 import os
 import json
 import time
+import requests
 import feedparser
 from bs4 import BeautifulSoup
-import google.generativeai as genai
 from datetime import datetime
 
 # Configuration
@@ -13,9 +13,6 @@ BLOG_FILE = "blog.json"
 if not API_KEY:
     print("CRITICAL: GEMINI_API_KEY environment variable not found. Sentinel halting.")
     exit(1)
-
-genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-2.5-flash')
 
 # AECweb V2 Intelligence Sources
 SOURCES = [
@@ -83,6 +80,7 @@ def get_latest_stories():
     return found_stories
 
 def rewrite_story(raw_story):
+    print("Processing: Artificial Intelligence")
     prompt = f"""
     You are the Chief Electrical Engineer and Content Strategist for 'Abilene Electrical Contractors' (AECweb).
     You are writing a blog post based on the following industry news.
@@ -103,12 +101,22 @@ def rewrite_story(raw_story):
     }}
     """
     
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={API_KEY}"
+    payload = {
+        "contents": [{"parts":[{"text": prompt}]}]
+    }
+    
     try:
-        response = model.generate_content(prompt)
-        result_text = response.text.replace('```json', '').replace('```', '').strip()
+        res = requests.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=30)
+        res.raise_for_status()
+        data = res.json()
+        result_text = data['candidates'][0]['content']['parts'][0]['text']
+        result_text = result_text.replace('```json', '').replace('```', '').strip()
         return json.loads(result_text)
     except Exception as e:
-        print(f"Error generating content with Gemini: {e}")
+        print(f"Error generating content with Gemini REST API: {e}")
+        if 'res' in locals():
+            print(f"Response dump: {res.text}")
         return None
 
 def run_sentinel():
@@ -120,7 +128,6 @@ def run_sentinel():
         return
         
     blog_data = load_blog()
-    new_entries = []
     
     # Process only the best fresh story of the day to avoid flooding
     story = stories[0]
