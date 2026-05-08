@@ -1,5 +1,15 @@
 [
   {
+    "id": 11,
+    "date": "May 08, 2026",
+    "category": "Industrial Tech",
+    "title": "Powering Resilience: The Electrical Infrastructure Imperative for Campus Fire Systems in Texas",
+    "summary": "As Texas' industrial and data center landscape expands, the reliability of fire water systems is paramount. This briefing underscores the critical role of robust electrical infrastructure in powering these life-saving systems, ensuring uninterrupted operational resilience.",
+    "content": "The unprecedented growth of manufacturing and data center campuses across Texas demands an equally robust approach to facility protection. While the hydraulic design of fire water systems rightly receives considerable attention, it is crucial for facility owners and developers to recognize that the operational reliability of these systems is fundamentally contingent upon a meticulously engineered electrical infrastructure. A fire water system, regardless of its hydraulic sophistication, is only as effective as the power supply and control mechanisms that drive its critical components, primarily the fire pumps. This complex interplay between water delivery and electrical integrity is a cornerstone of true operational resilience.\n\nDesigning for this resilience involves far more than simply running a wire. It necessitates dedicated, fault-tolerant power feeders, often with mandated redundant pathways, and seamless integration with emergency power systems (EPS) such as generators and Uninterruptible Power Supplies (UPS) via automatic transfer switches (ATS). Compliance with stringent standards like NFPA 20 for the installation of stationary pumps for fire protection, and NFPA 70 (National Electrical Code) for all associated electrical installations, is non-negotiable. Furthermore, the control systems for fire pumps, ranging from motor starters to advanced variable frequency drives (VFDs), must be designed for immediate and sustained operation under duress, integrating reliably with facility fire alarm and building management systems. At Abilene Electrical Contractors (AECweb), our expertise lies in engineering and implementing the sophisticated electrical backbone that ensures these mission-critical fire protection systems perform flawlessly when it matters most, safeguarding assets, operations, and personnel across Texas' burgeoning industrial and commercial sectors.",
+    "original_title": "How to design reliable and appropriate campus fire water systems",
+    "image": "images/blog/post_11.jpg"
+  },
+  {
     "id": 10,
     "date": "May 08, 2026",
     "category": "Industrial Tech",
