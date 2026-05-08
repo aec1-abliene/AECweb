@@ -42,6 +42,20 @@ def is_duplicate(title, blog_data):
             return True
     return False
 
+def prune_images(blog_data):
+    MAX_IMAGES = 20
+    for idx, post in enumerate(blog_data):
+        image_path = post.get("image", "")
+        if idx >= MAX_IMAGES:
+            if image_path.startswith("images/blog/"):
+                if os.path.exists(image_path):
+                    try:
+                        os.remove(image_path)
+                        print(f"Pruned old image to save space: {image_path}")
+                    except Exception as e:
+                        print(f"Error removing {image_path}: {e}")
+            post["image"] = "logo.png"
+
 def get_latest_stories():
     blog_data = load_blog()
     found_stories = []
@@ -98,7 +112,7 @@ def rewrite_story(raw_story):
         "category": "Industrial Tech",
         "summary": "A 1-2 sentence punchy summary",
         "content": "The full rewritten article, at least 2 paragraphs. Use HTML <br><br> tags for paragraph breaks instead of newlines.",
-        "image_keywords": "A comma-separated list of 2-3 broad keywords for a stock photo (e.g., 'industrial,factory', 'power,grid', 'technology,server')"
+        "image_prompt": "A 5-8 word descriptive prompt for an AI image generator (e.g., 'industrial power grid dark neon', 'commercial electrical switchgear futuristic')"
     }}
     """
     
@@ -146,9 +160,22 @@ def run_sentinel():
         content = new_post.get("content", "").replace('<br><br>', '\n\n')
         
         import urllib.parse
-        image_keywords = new_post.get("image_keywords", "technology,industrial").replace(' ', '')
-        encoded_keywords = urllib.parse.quote(image_keywords)
-        image_url = f"https://loremflickr.com/1280/720/{encoded_keywords}?lock={new_id}"
+        image_prompt = new_post.get("image_prompt", "industrial electrical power grid futuristic")
+        encoded_prompt = urllib.parse.quote(image_prompt)
+        pollinations_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1280&height=720&nologo=true"
+        
+        os.makedirs("images/blog", exist_ok=True)
+        local_image_path = f"images/blog/post_{new_id}.jpg"
+        try:
+            print(f"Downloading AI image...")
+            img_res = requests.get(pollinations_url, timeout=60)
+            img_res.raise_for_status()
+            with open(local_image_path, 'wb') as f:
+                f.write(img_res.content)
+            image_url = local_image_path
+        except Exception as e:
+            print(f"Error downloading image: {e}")
+            image_url = "logo.png"
         
         post_entry = {
             "id": new_id,
@@ -162,6 +189,7 @@ def run_sentinel():
         }
         
         blog_data.insert(0, post_entry)
+        prune_images(blog_data)
         save_blog(blog_data)
         print(f"SUCCESS: Added new article '{post_entry['title']}' to blog.json")
     else:
