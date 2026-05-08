@@ -42,5 +42,5 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "AECweb Sentinel"
-        git add blog.json
+        git add blog.json images/
         git diff --staged --quiet || (git commit -m "Automated Intelligence Update [Sentinel]" && git push)
