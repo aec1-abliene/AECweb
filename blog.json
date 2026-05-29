@@ -1,5 +1,15 @@
 [
   {
+    "id": 67,
+    "date": "May 29, 2026",
+    "category": "Industrial Tech",
+    "title": "AI-Driven Load Growth: Oregon's Tariff Decision Sets Precedent for Texas Electrical Infrastructure Resilience",
+    "summary": "A recent Oregon PUC ruling impacting data center energy costs and infrastructure sets a critical precedent for Texas, highlighting the urgent need for robust commercial and industrial electrical resilience amidst AI-driven load growth.",
+    "content": "A recent decision by the Oregon Public Utility Commission (PUC) approving Portland General Electric\u2019s (PGE) large-load tariff framework for data centers signals a significant shift in how states are preparing to manage unprecedented AI-driven electrical demand. This ruling, which shifts more infrastructure costs and interconnection obligations directly to hyperscale customers, positions Oregon\u2019s 2025 POWER Act as an early blueprint for addressing the massive energy needs of the digital economy. While geographically distant, this development holds profound implications for commercial and industrial electrical infrastructure planning right here in Texas.\n\nTexas, with its burgeoning technology sector, robust industrial base, and unique ERCOT grid, is particularly susceptible to similar pressures. The rapid expansion of AI and data center operations within our borders demands a proactive and strategic approach to electrical infrastructure. As the Chief Electrical Engineer for Abilene Electrical Contractors, I emphasize that this isn't merely a matter of increased capacity; it's about optimizing resilience, efficiency, and future-proofing existing systems. Businesses must anticipate potential shifts towards higher infrastructure contributions, more rigorous interconnection standards, and the imperative for comprehensive electrical system upgrades to ensure uninterrupted operational continuity. AECweb is strategically positioned to partner with Texas businesses in navigating these complex challenges, delivering scalable, resilient electrical solutions that meet the demands of tomorrow\u2019s AI-powered industrial landscape.",
+    "original_title": "Oregon PUC approves PGE\u2019s large-load tariff framework for data centers",
+    "image": "images/blog/post_67.jpg"
+  },
+  {
     "id": 66,
     "date": "May 28, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "California's analysis on geothermal's potential to reduce transmission needs offers a critical blueprint for strengthening Texas's industrial electrical infrastructure against escalating demands and grid vulnerabilities.<br><br>This insight underscores a strategic pathway for enhanced operational resilience across the Lone Star State.",
     "content": "The recent Clean Air Task Force (CATF) findings, indicating that enhanced geothermal deployment could significantly reduce California's need for interregional transmission infrastructure by 28% to 53%, provide a compelling case study with profound implications for the commercial and industrial sectors in Texas. While the monetary savings cited for California are substantial, the core takeaway for our state lies in the strategic advantage of baseload, localized power generation. For Texas, where the ERCOT grid faces increasing pressure from demand growth, extreme weather events, and the imperative for uninterrupted operations, the prospect of a reliable, 24/7 power source like geothermal directly translates to enhanced operational resilience and reduced vulnerability for our critical industrial facilities.\n\nThis paradigm shift towards decentralized, dependable power generation is not merely an academic exercise; it's a strategic imperative for Texas's economic future. By deploying in-state geothermal, which Texas possesses in significant capacity, we can mitigate the strain on our existing transmission infrastructure, minimize the risk of costly outages, and provide the stable power supply essential for manufacturing, data centers, and other energy-intensive operations. As Abilene Electrical Contractors, we recognize the escalating demand for robust and adaptable electrical systems. Our commitment is to ensure Texas's commercial and industrial enterprises are equipped with the infrastructure necessary to capitalize on such advancements, securing continuous power, optimizing efficiency, and fostering true energy independence within a more resilient grid architecture.",
     "original_title": "In-state geothermal could save California $44B annually: CATF",
-    "image": "images/blog/post_47.jpg"
+    "image": "logo.png"
   },
   {
     "id": 46,
