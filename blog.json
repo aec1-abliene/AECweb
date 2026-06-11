@@ -1,5 +1,15 @@
 [
   {
+    "id": 103,
+    "date": "Jun 11, 2026",
+    "category": "Industrial Tech",
+    "title": "Texas Power Infrastructure: Mastering the Shift to an Interactive, Resilient Grid",
+    "summary": "PG&E's solar milestone signals a critical industry shift towards an interactive grid, underscoring the urgent need for Texas commercial and industrial sectors to adapt their electrical infrastructure for enhanced operational resilience and efficiency.",
+    "content": "The recent announcement from Pacific Gas & Electric, detailing over one million customers connecting solar to their grid, serves as a powerful indicator of a fundamental transformation underway across the entire energy landscape. This milestone is not merely a quantitative achievement; it signifies an industry-wide pivot from the traditional 'one-way' power delivery model to a complex, interactive system where customer-sited energy resources are no longer just consumers, but active participants and critical components of the grid solution. For Abilene Electrical Contractors, this evolving paradigm underscores the increasing imperative for robust, intelligent electrical infrastructure capable of managing bidirectional power flow, dynamic load balancing, and integrating diverse Distributed Energy Resources (DERs) to bolster operational resilience against growing grid complexities and environmental challenges.\n\nIn Texas, operating within the unique ERCOT market, this global trend has profound and immediate implications for commercial and industrial enterprises. Our state's rapidly expanding renewable energy footprint, coupled with extreme weather vulnerabilities, necessitates a proactive approach to electrical infrastructure modernization. Businesses in Texas must now strategically integrate solutions such as advanced metering infrastructure, intelligent switchgear, utility-scale battery storage, and sophisticated microgrid technologies to maintain uninterrupted operations and capitalize on new energy management opportunities. AECweb specializes in empowering Texas C&I clients to navigate this complex transition, designing and implementing future-proof electrical systems that ensure reliability, optimize energy consumption, and secure critical operations in an increasingly interactive and demanding grid environment.",
+    "original_title": "1M+ customers have connected solar to PG&E\u2019s grid",
+    "image": "logo.png"
+  },
+  {
     "id": 102,
     "date": "Jun 11, 2026",
     "category": "Industrial Tech",
