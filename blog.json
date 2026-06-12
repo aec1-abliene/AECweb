@@ -1,5 +1,15 @@
 [
   {
+    "id": 106,
+    "date": "Jun 12, 2026",
+    "category": "Industrial Tech",
+    "title": "Unlocking Grid Resilience: The C&I Imperative for Demand-Side Optimization in Texas",
+    "summary": "Arizona's residential pool pump initiative highlights the immense potential of strategic load shifting. This paradigm shift holds significant implications for bolstering operational resilience and optimizing energy costs within Texas's commercial and industrial sectors.",
+    "content": "The Arizona Public Service and Salt River Project initiative, demonstrating how shifting residential pool pump operations from night to midday can reallocate up to 820 MW into off-peak tariffs, presents a compelling case study in grid optimization. While focused on residential consumers, the underlying principle of strategic demand-side management (DSM) holds profound implications for commercial and industrial (C&I) electrical infrastructure, particularly within Texas's unique ERCOT grid environment. The capability to intelligently shift significant load blocks directly mitigates peak demand pressures, which is a critical factor in maintaining grid stability and reducing wholesale energy market volatility, especially during periods of extreme weather or high consumption.\n\nFor Texas's C&I enterprises, this level of grid-wide load orchestration translates into tangible benefits: enhanced operational resilience through a more stable power supply, potential reductions in demand charges, and optimized energy procurement strategies. AECweb, as a leading electrical contractor, understands that C&I facilities often possess substantial, flexible loads\u2014such as HVAC systems, industrial refrigeration, process heating, and electric vehicle charging infrastructure\u2014that can be strategically managed. Implementing advanced energy management systems, integrating battery energy storage solutions, and developing comprehensive demand response programs are not just theoretical concepts; they are actionable strategies that Abilene Electrical Contractors is equipped to design and deploy, empowering Texas businesses to achieve greater energy efficiency, cost savings, and a more robust operational backbone. This proactive approach ensures our clients are not merely consumers but active participants in shaping a more resilient and efficient electrical future for Texas.",
+    "original_title": "What could save Arizona tens of millions in annual customer and infrastructure costs? Residential pool pumps.",
+    "image": "logo.png"
+  },
+  {
     "id": 105,
     "date": "Jun 12, 2026",
     "category": "Industrial Tech",
