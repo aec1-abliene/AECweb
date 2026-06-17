@@ -1,5 +1,15 @@
 [
   {
+    "id": 117,
+    "date": "Jun 17, 2026",
+    "category": "Industrial Tech",
+    "title": "Strategic Electrification: Maximizing Operational Resilience with Managed EV Fleets in Texas C&I",
+    "summary": "Recent advancements in managed, bidirectional EV charging, highlighted by announcements from General Motors and Rivian, are transforming how commercial and industrial enterprises can leverage their vehicle fleets to enhance grid stability and operational resilience across Texas.",
+    "content": "The recent announcements from automotive giants General Motors and Rivian concerning managed, bidirectional electric vehicle (EV) charging capabilities mark a pivotal moment for the U.S. electrical grid and, more specifically, for commercial and industrial (C&I) sectors within Texas. No longer are EVs solely viewed as passive energy loads; they are rapidly evolving into sophisticated, distributed energy resources (DERs) capable of actively participating in grid management. This paradigm shift, from vehicle-to-grid (V2G) to vehicle-to-building (V2B) and beyond, unlocks unprecedented opportunities for businesses to enhance their operational resilience, reduce energy costs, and contribute to a more stable electrical infrastructure.\n\nFor Texas C&I facilities, where operational continuity and cost efficiency are paramount, the implications of managed bidirectional charging are profound. Imagine a logistics hub where parked delivery EVs not only charge efficiently but can also discharge stored energy back into the facility during peak demand hours, effectively shaving utility costs, or providing crucial backup power during unforeseen grid disturbances \u2013 a particularly pertinent consideration within the ERCOT service area. This capability drastically improves resilience, enabling businesses to maintain critical operations even when external power supply is compromised. However, fully harnessing this potential demands robust, intelligently designed electrical infrastructure, encompassing advanced charging stations, sophisticated energy management systems, upgraded switchgear, and seamlessly integrated controls. Abilene Electrical Contractors (AECweb) stands ready to partner with Texas enterprises, offering unparalleled expertise in engineering, installing, and maintaining the complex electrical systems required to integrate these advanced EV fleet solutions, ensuring safety, reliability, and optimal performance for the future of industrial electrification.",
+    "original_title": "Managed, bidirectional EV charging advances with utility, automaker support",
+    "image": "images/blog/post_117.jpg"
+  },
+  {
     "id": 116,
     "date": "Jun 16, 2026",
     "category": "Industrial Tech",
