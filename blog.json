@@ -1,5 +1,15 @@
 [
   {
+    "id": 129,
+    "date": "Jun 22, 2026",
+    "category": "Industrial Tech",
+    "title": "Beyond the Charge: Strategic Visibility for Texas Industrial EV Load Management",
+    "summary": "The rapid proliferation of electric vehicles is placing unprecedented demands on Texas's commercial and industrial electrical infrastructure. Achieving granular visibility into these flexible loads is no longer optional; it's critical for maintaining operational resilience and economic stability.",
+    "content": "Electric Vehicles (EVs) are no longer a future concept; they are a present reality rapidly integrating into our electrical grid, particularly across Texas. This paradigm shift, while beneficial for sustainability, introduces significant new variables for commercial and industrial operations. The core challenge, as highlighted by industry insights, is a critical lack of visibility into these burgeoning flexible loads. For Texas, with its unique independent grid managed by ERCOT and a history of extreme weather events stressing infrastructure, this visibility gap presents a substantial threat to operational resilience. Unmonitored EV charging within facilities or impacting local substations can lead to unforeseen demand spikes, strain existing electrical infrastructure, and compromise power quality, all of which directly impact business continuity and profitability.\n\nThe notion that \"you can't manage what you can't see\" profoundly resonates within our sector. Without precise data on EV charging patterns and consumption, commercial and industrial enterprises are ill-equipped to optimize energy usage, participate in demand response programs, or even guarantee reliable power to critical operations. These \"flexible loads,\" when unmanaged, become liabilities, but with intelligent visibility, they transform into strategic assets. Implementing advanced metering infrastructure, smart charging stations, and integrated energy management systems allows businesses to monitor, analyze, and control EV-related electricity demand. Abilene Electrical Contractors (AECweb) specializes in delivering these sophisticated solutions, empowering Texas businesses to not only withstand the evolving demands of electrification but to leverage them for enhanced energy efficiency, cost reduction, and ultimately, unparalleled operational resilience against future grid fluctuations.",
+    "original_title": "EVs are already on your grid. Visibility is the missing piece.",
+    "image": "images/blog/post_129.jpg"
+  },
+  {
     "id": 128,
     "date": "Jun 21, 2026",
     "category": "Industrial Tech",
