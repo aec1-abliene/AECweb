@@ -1,5 +1,15 @@
 [
   {
+    "id": 136,
+    "date": "Jun 25, 2026",
+    "category": "Industrial Tech",
+    "title": "Nuclear's Resurgence: Fortifying Texas's Commercial and Industrial Grid Resilience",
+    "summary": "The U.S. Department of Energy's $17.5 billion loan initiative for new nuclear reactors signifies a pivotal national commitment, set to profoundly enhance the operational resilience and energy security for Texas's rapidly expanding commercial and industrial sectors.",
+    "content": "The U.S. Department of Energy's recent announcement of a $17.5 billion loan program for the development of ten new large nuclear reactors marks a monumental step in strengthening America's energy infrastructure. This substantial federal backing underscores a national strategic imperative to expand baseload, carbon-free power generation, directly addressing the growing demand for reliable electricity. Major utilities, including Entergy Corp., are positioned to benefit from this initiative, signaling a broad industry commitment to fortifying our grid. While the direct siting of all these reactors may be national, the ripple effects for Texas's energy landscape are profound, contributing to a more robust and diversified energy portfolio that underpins economic stability and operational predictability across the state.\n\nFor Texas's commercial and industrial sectors\u2014from manufacturing plants and data centers to petrochemical complexes and critical infrastructure\u2014uninterrupted, reliable power is non-negotiable for operational resilience and profitability. This national push towards expanding nuclear capacity directly enhances grid stability, mitigating the risks associated with intermittent energy sources and extreme weather events that have historically challenged our state's grid. As the Chief Electrical Engineer at Abilene Electrical Contractors (AECweb), we understand that this strengthened national energy posture will necessitate significant upgrades and meticulous maintenance of local transmission and distribution infrastructure. AEC is strategically positioned to partner with Texas industries, ensuring their electrical systems are optimized to fully leverage this enhanced grid stability, guaranteeing sustained operations, mitigating costly downtime, and supporting long-term growth objectives.",
+    "original_title": "DOE offers $17.5B in loans to help build 10 large nuclear reactors",
+    "image": "images/blog/post_136.jpg"
+  },
+  {
     "id": 135,
     "date": "Jun 24, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "As wildfire risk and extreme weather events challenge conventional grid infrastructure, Abilene Electrical Contractors champions advanced microgrid solutions to ensure unparalleled operational resilience and energy independence for Texas's vital commercial and industrial sectors.",
     "content": "The escalating threat of wildfires, alongside increasingly volatile weather patterns and grid instabilities, presents significant challenges to the reliability and resilience of conventional electrical grid infrastructure, particularly across Texas. While 'undergrounding' power lines is a frequently discussed strategy to mitigate direct ignition risks and protect certain distribution segments, it represents only one facet of a comprehensive resilience strategy. For Texas's diverse commercial and industrial (C&I) sectors, reliant on uninterrupted power for critical operations, data integrity, and production continuity, a more robust and proactive approach is imperative. Relying solely on a utility grid, even an undergrounded one, leaves businesses vulnerable to regional power failures, emphasizing the need for localized energy independence.\n\nThis imperative brings advanced microgrid solutions to the forefront. A microgrid offers a self-sufficient energy system capable of operating independently from the main grid during outages\u2014an 'islanding' capability\u2014by integrating diverse distributed energy resources such as solar photovoltaics, battery energy storage systems, and advanced generator controls. For industrial plants, data centers, manufacturing facilities, and critical commercial enterprises, microgrids provide an unparalleled level of energy independence and operational resilience. Abilene Electrical Contractors specializes in designing, integrating, and deploying these sophisticated systems. We ensure that your Texas facility not only mitigates the risks associated with grid instability but actively enhances its capacity for continuous, reliable operation, safeguarding your assets and ensuring uninterrupted business continuity amidst any challenge, from natural disasters to grid congestion.",
     "original_title": "In wildfire country, every home should be a microgrid",
-    "image": "images/blog/post_116.jpg"
+    "image": "logo.png"
   },
   {
     "id": 115,
