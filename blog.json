@@ -1,5 +1,15 @@
 [
   {
+    "id": 167,
+    "date": "Jul 06, 2026",
+    "category": "Industrial Tech",
+    "title": "Navigating Texas' Energy Future: Building Operational Resilience for Commercial and Industrial Infrastructure",
+    "summary": "While national energy markets face rising costs, Texas commercial and industrial enterprises must proactively adopt holistic energy strategies to secure operational resilience and mitigate growing infrastructure challenges within ERCOT's dynamic landscape.",
+    "content": "The broader energy industry is experiencing significant shifts, exemplified by recent rate adjustments and an intensified focus on grid reliability and cost control across various regional transmission organizations. While Abilene Electrical Contractors (AECweb) operates primarily within the ERCOT grid, the principles emerging from these discussions \u2013 particularly the imperative for a holistic energy strategy \u2013 hold profound relevance for Texas's commercial and industrial sectors.\n\nTexas businesses, more than ever, require robust electrical infrastructure solutions that transcend basic connectivity. The increasing volatility of energy costs, coupled with the critical need for uninterrupted operations in an era of extreme weather events and rapid industrial expansion, demands a proactive and comprehensive approach. AECweb champions the implementation of integrated energy strategies that empower our commercial and industrial clients to enhance operational resilience, optimize energy consumption, and secure their long-term viability. This encompasses advanced energy management systems, strategic deployment of distributed energy resources like on-site solar and battery storage, sophisticated demand-side management programs, and meticulous infrastructure upgrades designed for maximum reliability and efficiency. Embracing these advanced electrical engineering solutions is not merely an expense; it is a strategic investment critical for maintaining competitive advantage and ensuring seamless operations within Texas's unique and demanding energy environment.",
+    "original_title": "PJM\u2019s rate increase is here. What\u2019s your strategy?",
+    "image": "images/blog/post_167.jpg"
+  },
+  {
     "id": 166,
     "date": "Jul 05, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "Recent insights reveal how seemingly minor water pressure issues can necessitate significant fire pump upgrades. This underscores the critical electrical infrastructure demands for maintaining robust fire suppression and operational resilience in Texas commercial and industrial facilities.",
     "content": "This profound revelation underscores a critical vulnerability that commercial and industrial facility managers in Texas must acknowledge: the often-overlooked interplay between a building's water supply and its electrical infrastructure dedicated to fire suppression. A recent industry case study highlights how seemingly minor adjustments to pressure-reducing valves, going unnoticed, can drastically reduce available water pressure by 20 PSI. This deficiency, identified only through diligent hydrant flow testing during a building expansion, directly undermined the reliability of the existing sprinkler system and jeopardized fundamental code compliance. The immediate implication? A mandatory fire pump upgrade to restore essential safety parameters, a task that fundamentally impacts a facility\u2019s electrical integrity.\n\nFor Texas businesses, this scenario is more than a plumbing issue; it's a direct challenge to operational resilience and electrical infrastructure integrity. A fire pump upgrade is not merely a component swap; it mandates a thorough electrical system evaluation. Increased pump horsepower invariably translates to higher current draws, often requiring upgrades to electrical feeders, protective devices, and motor control centers. Furthermore, integrating a new fire pump, especially one designed to compensate for reduced water pressure, necessitates precise calibration of control panels, potential implementation of Variable Frequency Drives (VFDs) for optimized performance, and stringent adherence to NFPA 20 (Standard for the Installation of Stationary Pumps for Fire Protection) and NFPA 70 (National Electrical Code) standards. Abilene Electrical Contractors (AECweb) specializes in these complex industrial electrical solutions, ensuring that your facility\u2019s fire suppression systems are not only compliant but robustly engineered for maximum operational uptime and safety. Proactive assessments, like the hydrant testing described, are invaluable, but the subsequent electrical remediation and optimization are paramount to true facility resilience.",
     "original_title": "Case study: Identifying water supply deficiencies through fire hydrant flow testing",
-    "image": "images/blog/post_147.jpg"
+    "image": "logo.png"
   },
   {
     "id": 146,
