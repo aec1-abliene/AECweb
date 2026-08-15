@@ -1,5 +1,15 @@
 [
   {
+    "id": 284,
+    "date": "Aug 15, 2026",
+    "category": "Industrial Tech",
+    "title": "Beyond Comfort: The Electrical Engineering Mandate for VAV Systems and Operational Resilience in Texas",
+    "summary": "A recent case study highlights advanced VAV systems for indoor air quality. For Texas commercial and industrial facilities, this underscores a critical need for robust electrical infrastructure that supports intelligent HVAC, ensuring both operational resilience and profound energy efficiency.",
+    "content": "The recent discussion regarding a multizone Variable Air Volume (VAV) system designed to optimize air quality in a Florida office building serves as a potent reminder of the escalating complexity and criticality of modern HVAC infrastructure.\n\nFor commercial and industrial entities across Texas, where extreme climatic conditions dictate significant energy consumption and grid demands, the implementation of sophisticated VAV systems is not merely about occupant comfort; it is an imperative for operational resilience and strategic energy management. These systems, at their core, are electrically driven, relying on Variable Frequency Drives (VFDs) to precisely control fan motor speeds and sophisticated Building Automation Systems (BAS) for integrated zone management. The electrical design, installation, and ongoing maintenance of these components\u2014from appropriately sized feeders and protective devices to intricate control wiring and seamless integration with facility-wide power management\u2014are paramount. Abilene Electrical Contractors understands that the dynamic electrical loads presented by VAV systems require precise engineering to prevent inefficiencies, ensure reliability, and mitigate potential disruptions that could impact mission-critical operations or manufacturing processes.",
+    "original_title": "Case study: How an office building tackled air quality with VAV",
+    "image": "images/blog/post_284.jpg"
+  },
+  {
     "id": 283,
     "date": "Aug 15, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "A groundbreaking collaboration between Curio, NuScale, and Framatome to develop advanced nuclear fuel technologies marks a pivotal step towards enhancing grid stability, directly fortifying the operational resilience of Texas's critical commercial and industrial infrastructure.",
     "content": "At Abilene Electrical Contractors (AECweb), we are vigilantly tracking innovations that redefine the landscape of industrial and commercial electrical infrastructure. A recent announcement, highlighted by POWER Magazine, underscores a critical advancement in global energy resilience: Curio, NuScale, and Framatome, prominent leaders in nuclear energy technology, have formally committed through a Memorandum of Understanding (MOU) to evaluate and accelerate fuel solutions for next-generation nuclear reactors. This synergistic effort is far more than a technical agreement; it represents a foundational stride toward deploying advanced nuclear designs, particularly Small Modular Reactors (SMRs), which are increasingly recognized as indispensable for constructing a stable, high-capacity electrical grid capable of withstanding escalating demands and environmental volatility.\n\nFor Texas's dynamic and rapidly expanding commercial and industrial sectors, this development carries profound implications. The prospective integration of advanced nuclear power promises a consistent, carbon-free baseload energy supply, fundamentally enhancing grid reliability and significantly reducing dependence on energy sources susceptible to market fluctuations or severe weather events \u2013 a crucial lesson solidified by past disruptions. Industrial operations, ranging from precision manufacturing facilities to mission-critical data centers, demand unwavering power for continuous operational integrity and economic viability. AECweb understands that robust, meticulously engineered electrical infrastructure is paramount to effectively harnessing such future energy solutions. As these advanced reactors progress towards deployment, our unparalleled expertise in high-capacity electrical systems, intricate grid integration, and comprehensive facility electrification will be vital in ensuring that Texas businesses are not only prepared but strategically positioned to thrive from the unprecedented stability and resilience that next-generation nuclear power will imminently bring to our state's vital energy portfolio.",
     "original_title": "Curio, NuScale, Framatome Join to Support Fuel Solution for Advanced Reactors",
-    "image": "images/blog/post_264.jpg"
+    "image": "logo.png"
   },
   {
     "id": 263,
