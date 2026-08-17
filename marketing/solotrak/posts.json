@@ -1,0 +1,198 @@
+{
+  "brand_name": "SoloTrak Independent Contractor Telemetry",
+  "official_logo": "apptx_official_logo.png",
+  "tagline": "All-in-One Mobile Field Management for Solo Contractors & Independent Specialists",
+  "website": "apptx.co",
+  "posts": [
+    {
+      "id": 1,
+      "title": "All-in-One Field Management for Solo Contractors",
+      "persona": "Independent Trade Specialists & Solo Operators",
+      "objective": "Introduce SoloTrak as the ultimate single-user contractor app.",
+      "caption": "Run your entire business from your pocket. SoloTrak combines job dispatch, client invoicing, time tracking, and receipt scanning into one sleek app built for solo pros.",
+      "hashtags": [
+        "#SoloContractor",
+        "#FieldManagement",
+        "#SoloTrak",
+        "#TradeProfessional",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Solo electrician in clean work gear holding smartphone showing SoloTrak mobile dashboard next to work van.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Automated Geofenced Clock-In & Out",
+      "persona": "Solo Service Technicians & Handymen",
+      "objective": "Promote hands-free automated location clock-in.",
+      "caption": "Arrive at the jobsite and start logging time automatically. SoloTrak detects when you enter the customer's property line so you never forget to log billable hours.",
+      "hashtags": [
+        "#AutoClockIn",
+        "#Geofence",
+        "#TimeTracking",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "GPS map location pin dropped on residential service location with 'Auto-Clock In Active' notification banner.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Instant Mobile Invoicing & Digital Estimates",
+      "persona": "Independent Plumbers, HVAC Techs & Electricians",
+      "objective": "Showcase fast on-site invoicing and instant payments.",
+      "caption": "Get paid before you leave the driveway. Generate professional estimates and invoices directly on your phone and email them to clients in seconds with SoloTrak.",
+      "hashtags": [
+        "#MobileInvoicing",
+        "#GetPaidFast",
+        "#ContractorBilling",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Clean mobile invoice interface with 'Send to Client' green button and total cost breakdown.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Mobile Receipt AI Scanner & Tax Expense Tracking",
+      "persona": "Self-Employed Contractors & Bookkeepers",
+      "objective": "Highlight AI receipt scanning for tax deductible expenses.",
+      "caption": "Stop losing supply store receipts in your truck console. Scan receipts instantly with SoloTrak AI to categorize material expenses for tax time.",
+      "hashtags": [
+        "#ReceiptScanner",
+        "#ExpenseTracking",
+        "#SmallBusinessTax",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Receipt image being processed by mobile scanner with extracted totals and job association.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Equipment & Tool QR Tagging",
+      "persona": "Specialized Service Technicians",
+      "objective": "Showcase QR tool tagging for solo pros.",
+      "caption": "Keep track of specialized diagnostic tools and equipment across client sites. Tag tools with QR codes and scan with SoloTrak to know where everything is.",
+      "hashtags": [
+        "#ToolTracking",
+        "#QRTagging",
+        "#EquipmentManagement",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Durable tool case with QR code badge being scanned by mobile app camera.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Offline-First Sync for Remote Jobsites",
+      "persona": "Rural & Industrial Field Techs",
+      "objective": "Promote full functionality in zero-cell-service zones.",
+      "caption": "Working in a basement or remote location with no signal? SoloTrak works 100% offline and automatically syncs all logs once connectivity is restored.",
+      "hashtags": [
+        "#OfflineFirst",
+        "#RemoteJobs",
+        "#FieldSoftware",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Remote jobsite scene with 'Offline Sync Queue' indicator badge showing active offline data storage.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Client Communication & Photo Proof of Work",
+      "persona": "Residential Service Pros & Remodelers",
+      "objective": "Highlight before/after photo uploads and work proof.",
+      "caption": "Build bulletproof trust with property owners. Attach before and after site photos directly to customer service records in SoloTrak.",
+      "hashtags": [
+        "#ProofOfWork",
+        "#PhotoDoc",
+        "#CustomerTrust",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Side-by-side before and after repair photos displayed within a sleek customer report template.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Vehicle Mileage & Travel Expense Tracking",
+      "persona": "Mobile Service Specialists",
+      "objective": "Promote mileage tracking for tax write-offs.",
+      "caption": "Don't leave thousands in vehicle mileage tax deductions on the table. Track trip miles between service calls effortlessly with SoloTrak.",
+      "hashtags": [
+        "#MileageTracker",
+        "#TaxDeductions",
+        "#MobileBusiness",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Digital odometer mileage tracker interface displaying route map and calculated mileage expense.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Zero Office Bloat \u2013 Pure Contractor Utility",
+      "persona": "Field-Focused Trade Experts",
+      "objective": "Emphasize simplicity and lack of cumbersome desktop software.",
+      "caption": "No complicated menus or bulky office setups. SoloTrak is engineered specifically for hands-on trade pros who want fast, simple software that just works.",
+      "hashtags": [
+        "#ZeroBloat",
+        "#ContractorTools",
+        "#SimpleSoftware",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Clean high-contrast mobile app interface showing single-tap buttons for Clock In, Scan, and Invoice.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 10,
+      "title": "One-Tap E-Signatures for Work Orders",
+      "persona": "Residential & Commercial Service Providers",
+      "objective": "Showcase on-site client e-signature capture.",
+      "caption": "Get client approval immediately upon job completion. Capture digital signatures on your phone and automatically email signed work receipts.",
+      "hashtags": [
+        "#ESignature",
+        "#WorkOrderApproval",
+        "#ClientSignoff",
+        "#SoloTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Customer signing mobile touchscreen with digital stylus and verified timestamp badge.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    }
+  ]
+}

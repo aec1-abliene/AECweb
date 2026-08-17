@@ -1,0 +1,198 @@
+{
+  "brand_name": "AppTX Application Development",
+  "official_logo": "apptx_official_logo.png",
+  "tagline": "Enterprise Custom Software Engineering & App Development",
+  "website": "apptx.co",
+  "posts": [
+    {
+      "id": 1,
+      "title": "Bespoke Mobile & Web App Engineering",
+      "persona": "CTOs, Founders & Enterprise Software Leaders",
+      "objective": "Promote AppTX's full-stack custom application development services.",
+      "caption": "Off-the-shelf software rarely fits enterprise workflows. At AppTX, we build high-performance custom mobile and web applications tailored specifically to your operational demands. Built for speed, security, and scalability.\n\nTransform your ideas into production-ready software.",
+      "hashtags": [
+        "#AppDevelopment",
+        "#SoftwareEngineering",
+        "#CustomSoftware",
+        "#TechInnovation",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Sleek dark-mode IDE interface overlaid with modern mobile and web app mockups showing live telemetry and code structures.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Scalable Cloud Architecture & API Pipelines",
+      "persona": "IT Directors & Systems Architects",
+      "objective": "Highlight AppTX's expertise in cloud infrastructure and API integrations.",
+      "caption": "Is your legacy backend holding your growth back? AppTX designs robust cloud architectures and high-throughput API pipelines that handle enterprise scale without latency or downtime.\n\nBuild a foundation engineered for the future.",
+      "hashtags": [
+        "#CloudArchitecture",
+        "#APIDevelopment",
+        "#CloudEngineering",
+        "#EnterpriseIT",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "3D network topology diagram illustrating secure microservices connected to high-speed cloud databases.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Enterprise AI Integration & Process Automation",
+      "persona": "Chief Digital Officers & Operations Executives",
+      "objective": "Position AppTX as a leader in AI automation and custom model deployment.",
+      "caption": "Unlock massive productivity gains by integrating intelligent AI workflows directly into your core business applications. From automated document extraction to predictive analytics, AppTX builds AI solutions that drive real ROI.",
+      "hashtags": [
+        "#AIIntegration",
+        "#ProcessAutomation",
+        "#EnterpriseAI",
+        "#MachineLearning",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Abstract glowing neural network mesh with data analytics overlay in clean corporate blues.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Legacy System Modernization",
+      "persona": "Enterprise CIOs & Technical Decision Makers",
+      "objective": "Offer seamless modernization of outdated legacy software.",
+      "caption": "Don't let legacy code lock down your operations. AppTX specializes in refactoring and modernizing legacy monoliths into cloud-native microservices with zero downtime for your existing users.",
+      "hashtags": [
+        "#LegacyModernization",
+        "#CloudNative",
+        "#SoftwareRefactoring",
+        "#DigitalTransformation",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Split visual showing a transformation from outdated terminal code to a sleek modern glassmorphism dashboard.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 5,
+      "title": "High-Performance Frontend & UI/UX Design",
+      "persona": "Product Managers & Marketing Executives",
+      "objective": "Showcase user-centered design and ultra-fast UI performance.",
+      "caption": "User experience dictates adoption. AppTX crafts intuitive, lightning-fast web and mobile interfaces using cutting-edge design systems and React/Next.js frameworks designed to delight users.",
+      "hashtags": [
+        "#UIUXDesign",
+        "#FrontendDev",
+        "#WebDevelopment",
+        "#ProductDesign",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Figma design system layout showing UI component tokens, dark theme buttons, and interactive mobile cards.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Real-Time Telemetry & Data Pipelines",
+      "persona": "Industrial Tech Officers & Logistics Managers",
+      "objective": "Highlight real-time data streaming and field telemetry applications.",
+      "caption": "Stream sensor data, field updates, and operational telemetry instantly. AppTX engineers real-time WebSocket and event-driven architectures for live field visibility.",
+      "hashtags": [
+        "#RealTimeData",
+        "#Telemetry",
+        "#IoTSoftware",
+        "#DataPipelines",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Live streaming data dashboard with wave analytics, real-time gauges, and status indicators.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Custom SaaS Platform Development",
+      "persona": "SaaS Founders & Enterprise Software Innovators",
+      "objective": "Drive custom SaaS build requests to AppTX.",
+      "caption": "From multi-tenant billing to role-based access control, AppTX builds complete SaaS platforms from concept to launch. Turn your industry expertise into a scalable software asset.",
+      "hashtags": [
+        "#SaaSDevelopment",
+        "#BuildInPublic",
+        "#SoftwareAsAService",
+        "#WebApps",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Multi-tenant SaaS dashboard displaying user analytics, subscription tiers, and active customer metrics.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Enterprise Security & Multi-Tenant Data Protection",
+      "persona": "CISOs & Enterprise Risk Directors",
+      "objective": "Emphasize security-first engineering and compliance.",
+      "caption": "Security is non-negotiable. AppTX embeds strict encryption, granular RBAC, and SOC2-ready security protocols into every layer of your application codebase.",
+      "hashtags": [
+        "#Cybersecurity",
+        "#DataProtection",
+        "#SecureCoding",
+        "#AppSecurity",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Digital security shield overlay on encrypted database architecture lines with gold and blue accents.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Microservices & Distributed Backends",
+      "persona": "Lead Architects & Engineering VPs",
+      "objective": "Demonstrate expertise in distributed backend systems.",
+      "caption": "Scale independent features without bottlenecking your entire stack. AppTX architectures decoupled microservices that handle peak workloads with precision fault tolerance.",
+      "hashtags": [
+        "#Microservices",
+        "#BackendEngineering",
+        "#DistributedSystems",
+        "#DevOps",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Modular glowing microservice nodes exchanging encrypted JSON payloads over cloud connections.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Rapid MVP to Full Scale Engineering",
+      "persona": "Startup Founders & Enterprise Innovation Teams",
+      "objective": "Promote rapid prototyping and full product launch services.",
+      "caption": "Get to market faster without technical debt. AppTX accelerates your product roadmap from rapid MVP prototype to robust enterprise-grade application in record time.",
+      "hashtags": [
+        "#MVPDevelopment",
+        "#RapidPrototyping",
+        "#SoftwareLaunch",
+        "#TechGrowth",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Rocket launch trajectory concept merging into a sleek production software timeline.",
+        "top_right_logo": "apptx_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "brand_name": "AppuTrak 1.0 Construction & Fleet Management",
+  "official_logo": "apputrak_official_logo.png",
+  "tagline": "Enterprise Construction Company, Fleet & Equipment Operations Platform",
+  "website": "apptx.co",
+  "posts": [
+    {
+      "id": 1,
+      "title": "Construction Project Tracking & Real-Time Jobsite Telemetry",
+      "persona": "General Contractors & Commercial Project Managers",
+      "objective": "Highlight AppuTrak's end-to-end jobsite tracking.",
+      "caption": "Keep every jobsite on schedule and under budget. AppuTrak 1.0 delivers real-time project tracking, crew allocation, and site progress monitoring right from your mobile device.",
+      "hashtags": [
+        "#ConstructionManagement",
+        "#JobsiteTracking",
+        "#AppuTrak",
+        "#GeneralContractor",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Commercial construction jobsite active with mobile dashboard overlay displaying progress telemetry.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Heavy Equipment & Fleet QR Code Tracking",
+      "persona": "Fleet Managers & Equipment Superintendents",
+      "objective": "Showcase QR code tag scanning for machinery and fleet assets.",
+      "caption": "Never lose track of high-value tools or machinery again. Scan QR code tags on equipment with AppuTrak 1.0 to view instant service logs, location, and operator assignments.",
+      "hashtags": [
+        "#EquipmentTracking",
+        "#FleetManagement",
+        "#QRScanner",
+        "#AppuTrak",
+        "#ConstructionTech"
+      ],
+      "visual_spec": {
+        "topic_visual": "Technician scanning a durable QR code badge on an excavator with a rugged smartphone interface.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Geofenced Jobsite Clock-In & Automated Time Logs",
+      "persona": "Payroll Officers & Field Superintendents",
+      "objective": "Promote automatic geofenced labor hour logging.",
+      "caption": "Eliminate manual timesheet errors. AppuTrak 1.0 automatically logs crew arrival and departure as soon as workers cross the jobsite geofence perimeter.",
+      "hashtags": [
+        "#GeofenceTracking",
+        "#TimeLogging",
+        "#ConstructionPayroll",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "GPS satellite map showing a glowing green geofence boundary around a commercial build site with automatic clock-in popups.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 4,
+      "title": "AIA Progress Billing (G702/G703) & Retainage",
+      "persona": "Construction Controllers & Project Accountants",
+      "objective": "Demonstrate automated AIA schedule of values and billing.",
+      "caption": "Generate AIA G702 and G703 progress billing in minutes, not hours. AppuTrak 1.0 calculates completed work percentages, stored materials, and retainage automatically.",
+      "hashtags": [
+        "#AIABilling",
+        "#ConstructionAccounting",
+        "#ProgressBilling",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Formal AIA G702/G703 document preview rendered on a tablet with automated calculations highlight.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Change Order Approval Workflows",
+      "persona": "Project Executives & Subcontractor Leads",
+      "objective": "Promote fast digital change order creation and client sign-off.",
+      "caption": "Unapproved changes bleed profits. Capture field change requests, attach photos, and get instant digital client sign-off on change orders with AppuTrak 1.0.",
+      "hashtags": [
+        "#ChangeOrders",
+        "#ConstructionContracts",
+        "#ProjectManagement",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Digital change order authorization form on tablet screen with e-signature line highlighted in green.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Lien Waiver Management & Partial Releases",
+      "persona": "Risk Managers & General Counsel",
+      "objective": "Showcase automated partial and final lien release generation.",
+      "caption": "Protect your company from legal disputes. AppuTrak 1.0 generates conditional and unconditional lien waivers tied directly to invoice pay applications.",
+      "hashtags": [
+        "#LienWaivers",
+        "#ConstructionRisk",
+        "#LegalCompliance",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Legal seal icon alongside digital lien waiver release document with verification checkmarks.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Multi-Company Contractor Portal",
+      "persona": "Multi-Entity Owners & Commercial Contractors",
+      "objective": "Highlight seamless multi-company switching and management.",
+      "caption": "Managing multiple sub-entities or regional branches? Switch companies with one tap in AppuTrak 1.0 while maintaining isolated financial records and crew permissions.",
+      "hashtags": [
+        "#MultiCompany",
+        "#ContractorPortal",
+        "#EnterpriseConstruction",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Company selector dropdown interface showing distinct general contractor company profiles.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Geofenced Receipt & Expense Scanner",
+      "persona": "Field Purchasers & Operations Accounting",
+      "objective": "Promote receipt OCR scanning tied to specific jobsite budgets.",
+      "caption": "Snap a photo of supply store receipts on the road. AppuTrak 1.0's AI scanner automatically extracts vendor, totals, and categorizes expenses to the active jobsite.",
+      "hashtags": [
+        "#ExpenseTracking",
+        "#ReceiptScanner",
+        "#ConstructionFinance",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Smartphone camera scanning a hardware store receipt with bounding box text extraction.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Machinery Service History & Maintenance Logs",
+      "persona": "Equipment Shop Foremen & Mechanics",
+      "objective": "Highlight preventive maintenance logging for heavy machinery.",
+      "caption": "Prevent costly jobsite equipment breakdowns. Log engine hours, oil changes, and inspection notes in AppuTrak 1.0 to keep your entire fleet operating at peak performance.",
+      "hashtags": [
+        "#MachineryMaintenance",
+        "#FleetCare",
+        "#EquipmentLogs",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Mechanic performing inspection on bulldozer with tablet showing service checklist.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Construction Cost-to-Complete Analytics",
+      "persona": "Chief Estimators & Operations Directors",
+      "objective": "Demonstrate real-time margin visibility and financial reporting.",
+      "caption": "Know your true job profitability before the project ends. AppuTrak 1.0 compares estimated vs. actual labor, materials, and equipment costs in real time.",
+      "hashtags": [
+        "#ConstructionAnalytics",
+        "#JobCosting",
+        "#Profitability",
+        "#AppuTrak",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Financial chart showing estimated budget bars vs actual cost bars with positive green profit margin callout.",
+        "top_right_logo": "apputrak_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    }
+  ]
+}

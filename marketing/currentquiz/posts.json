@@ -1,0 +1,198 @@
+{
+  "brand_name": "CurrentQuiz Trade Safety & Compliance",
+  "official_logo": "current_quiz_official_logo.png",
+  "tagline": "Interactive Trade Safety, Code Compliance & Skill Certification Platform",
+  "website": "apptx.co",
+  "posts": [
+    {
+      "id": 1,
+      "title": "NEC Electrical Code Compliance Quizzes",
+      "persona": "Electricians, Apprentices & Master Inspectors",
+      "objective": "Promote National Electrical Code testing and mastery.",
+      "caption": "Master the National Electrical Code with interactive daily quizzes. CurrentQuiz tests your team on wire sizing, conduit fill, grounding, and NEC updates to keep skills sharp.",
+      "hashtags": [
+        "#NECcode",
+        "#ElectricalSafety",
+        "#CurrentQuiz",
+        "#MasterElectrician",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "NEC Code handbook next to tablet showing interactive multiple-choice electrical code quiz question.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Daily Jobsite Safety Briefings & Quiz Assessments",
+      "persona": "Safety Directors & Jobsite Superintendents",
+      "objective": "Highlight daily safety quiz verification for field crews.",
+      "caption": "Don't just sign safety checklists\u2014verify comprehension. CurrentQuiz delivers 2-minute daily safety quizzes to ensure crews understand critical jobsite hazard protocols.",
+      "hashtags": [
+        "#JobsiteSafety",
+        "#OSHACompliance",
+        "#SafetyBriefing",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Construction crew wearing hard hats reviewing safety quiz scores on a tablet at morning tailboard.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Apprentice Skill Certification & Progress Tracking",
+      "persona": "Apprenticeship Instructors & Training Managers",
+      "objective": "Showcase apprentice tracking and skill verification.",
+      "caption": "Track trade apprentice learning progress with detailed analytics. CurrentQuiz evaluates practical knowledge across electrical, HVAC, and mechanical disciplines.",
+      "hashtags": [
+        "#ApprenticeTraining",
+        "#SkillVerification",
+        "#TradeEducation",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Student progress scorecard displaying 95% proficiency badge in high-voltage circuit safety.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 4,
+      "title": "High-Voltage & Arc Flash Safety Protocols",
+      "persona": "Commercial & Industrial Electricians",
+      "objective": "Promote NFPA 70E and arc flash boundary testing.",
+      "caption": "Arc flash safety saves lives. Test technician mastery of NFPA 70E safety boundaries, PPE requirements, and lock-out/tag-out procedures with CurrentQuiz.",
+      "hashtags": [
+        "#ArcFlashSafety",
+        "#NFPA70E",
+        "#ElectricalTraining",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Arc flash safety gear icon alongside NFPA 70E quiz module interface.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 5,
+      "title": "OSHA Standard Compliance & Audit Readiness",
+      "persona": "Corporate Compliance Officers & HR Managers",
+      "objective": "Demonstrate audit-ready employee safety records.",
+      "caption": "Stay 100% audit-ready for OSHA inspections. CurrentQuiz automatically logs employee test completions, scores, and timestamped compliance records.",
+      "hashtags": [
+        "#OSHA",
+        "#ComplianceAudit",
+        "#SafetyRecords",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "OSHA compliance seal next to digital record archive showing 100% crew completion rate.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Interactive Equipment Operation Testing",
+      "persona": "Equipment Field Supervisors & Tech Leads",
+      "objective": "Highlight specialized machinery operation quizzes.",
+      "caption": "Ensure operators understand equipment limits before turning the key. CurrentQuiz tests crew members on aerial lift, excavator, and boom truck operating safety.",
+      "hashtags": [
+        "#EquipmentSafety",
+        "#OperatorTraining",
+        "#SafetyTesting",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Aerial boom lift equipment diagram with interactive quiz callout questions.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Continuing Education & Journeyman Exam Prep",
+      "persona": "Journeyman Electricians & License Applicants",
+      "objective": "Promote exam prep modules for trade licensing.",
+      "caption": "Preparing for your Journeyman or Master license exam? CurrentQuiz offers practice exam simulation modules designed to help you pass on the first attempt.",
+      "hashtags": [
+        "#JourneymanExam",
+        "#MasterElectrician",
+        "#LicensePrep",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Practice exam timer interface showing 100 question mock licensing test with detailed score breakdown.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Custom Company Safety Protocol Testing",
+      "persona": "Safety Directors & Company Owners",
+      "objective": "Highlight custom quiz creation for proprietary company SOPs.",
+      "caption": "Have company-specific safety SOPs or jobsite rules? Upload your own custom training questions into CurrentQuiz and track team performance.",
+      "hashtags": [
+        "#CompanySOP",
+        "#CustomTraining",
+        "#WorkforceSafety",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Custom quiz builder screen with questions, answers, and company branding settings.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Real-Time Quiz Analytics for Safety Officers",
+      "persona": "EHS Officers & Risk Directors",
+      "objective": "Showcase company-wide safety knowledge analytics.",
+      "caption": "Identify knowledge gaps before they cause accidents. CurrentQuiz analytics highlight specific topics where your team needs additional training.",
+      "hashtags": [
+        "#SafetyAnalytics",
+        "#RiskMitigation",
+        "#EHSManagement",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Analytics dashboard displaying company-wide quiz pass rates and topic proficiency heatmaps.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Mobile On-the-Go Micro-Learning",
+      "persona": "Field Technicians & On-the-Go Workers",
+      "objective": "Promote quick 2-minute mobile learning sessions.",
+      "caption": "Training shouldn't pull workers away from billable tasks. CurrentQuiz offers bite-sized micro-quizzes that field technicians can complete in under 3 minutes.",
+      "hashtags": [
+        "#MicroLearning",
+        "#MobileTraining",
+        "#FieldTechs",
+        "#CurrentQuiz",
+        "#AppTX"
+      ],
+      "visual_spec": {
+        "topic_visual": "Technician completing a quick 3-question quiz on a mobile phone during a coffee break.",
+        "top_right_logo": "current_quiz_official_logo.png",
+        "bottom_footer": "apptx.co"
+      }
+    }
+  ]
+}
