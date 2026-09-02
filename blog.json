@@ -1,5 +1,15 @@
 [
   {
+    "id": 325,
+    "date": "Sep 02, 2026",
+    "category": "Industrial Tech",
+    "title": "Strategic Resilience: Navigating Supply Chain Shifts for Texas' Industrial & Commercial Electrical Infrastructure",
+    "summary": "Recent executive actions and guidance are poised to significantly disrupt global battery and inverter supply chains, directly impacting energy storage project timelines. This mandates a proactive re-evaluation of strategies for maintaining operational resilience across Texas' commercial and industrial electrical infrastructure.",
+    "content": "The intricate web of global supply chains, critical for the advancement of modern electrical infrastructure, is facing significant geopolitical pressures. A recent executive order, coupled with associated Treasury Department Foreign Entity of Concern guidance, is anticipated to cause substantial delays and cancellations in energy storage projects, specifically targeting battery and inverter supply.\n\nFor Texas' commercial and industrial sectors, this development necessitates immediate strategic consideration. As demand for grid independence, peak shaving, demand response, and enhanced power reliability continues to surge across our state, reliance on advanced energy storage solutions is becoming paramount. The potential for disruption in the availability of key components like high-capacity batteries and sophisticated inverters directly threatens the scheduled deployment of critical infrastructure upgrades, microgrid initiatives, and backup power systems crucial for operational continuity. Abilene Electrical Contractors (AECweb) urges stakeholders to assess current project pipelines, diversify supplier relationships where feasible, and engage in robust contingency planning to mitigate these emerging risks. Our team of expert electrical engineers and project managers stands ready to provide comprehensive consultation, engineering solutions, and strategic project execution to ensure your facilities maintain their electrical resilience and operational efficiency amidst these evolving market dynamics.",
+    "original_title": "Trump grid order likely to cause energy storage delays, cancellations: BloombergNEF",
+    "image": "images/blog/post_325.jpg"
+  },
+  {
     "id": 324,
     "date": "Sep 01, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "NVIDIA and Cloverleaf's partnership signals an accelerating buildout of AI data centers with unprecedented power demands. For Texas' commercial and industrial sectors, this necessitates a critical focus on robust electrical infrastructure to ensure operational continuity and grid stability.",
     "content": "The recent strategic partnership between technology giant NVIDIA and Cloverleaf Infrastructure, focused on advancing AI data center development and providing critical power sources, marks a pivotal moment for the commercial and industrial electrical landscape in Texas. This collaboration underscores an accelerating global imperative to build out the sophisticated digital infrastructure required to support the burgeoning field of artificial intelligence. For Texas, a state already at the forefront of technological and industrial growth, this translates directly into an unprecedented demand for robust, resilient, and highly advanced electrical systems capable of powering these next-generation facilities.\n\nThe implications for our electrical infrastructure are profound. AI data centers are not merely large consumers of electricity; they represent concentrated loads with extraordinary power densities, requiring meticulous design and deployment of medium-voltage distribution, sophisticated switchgear, multi-redundant UPS systems, and advanced power generation capabilities. Ensuring operational resilience for these mission-critical environments means mitigating risks associated with grid fluctuations, managing peak demand, and guaranteeing uninterruptible power flow. This necessitates expert electrical engineering, precision installation, and ongoing maintenance focused on system efficiency and reliability. As these developments proliferate across Texas, the imperative for commercial and industrial entities to partner with electrical contractors possessing deep expertise in high-demand, critical power infrastructure becomes paramount for maintaining both individual facility uptime and broader grid stability.",
     "original_title": "NVIDIA, Cloverleaf Partnering to Advance Data Center Development",
-    "image": "images/blog/post_305.jpg"
+    "image": "logo.png"
   },
   {
     "id": 304,
