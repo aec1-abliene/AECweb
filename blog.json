@@ -1,5 +1,15 @@
 [
   {
+    "id": 363,
+    "date": "Sep 15, 2026",
+    "category": "Industrial Tech",
+    "title": "Operational Resilience at Stake: How EPA's Power Standard Revisions Impact Texas Infrastructure",
+    "summary": "As the EPA considers significant changes to power plant carbon standards, Texas's commercial and industrial sectors must prepare for potential shifts in grid stability and energy policy, demanding heightened focus on operational resilience.",
+    "content": "The recent news indicating the Environmental Protection Agency (EPA) is poised to revise or eliminate federal power plant carbon standards introduces a critical juncture for Texas's commercial and industrial electrical infrastructure. While the full scope of these changes is yet to unfold, the potential for altered regulatory landscapes carries significant implications for operational resilience across our state's vast industrial footprint. For businesses reliant on a stable, cost-effective power supply, this shift may necessitate a re-evaluation of energy procurement strategies, grid dependency, and the long-term sustainability of their electrical systems. Our focus at Abilene Electrical Contractors (AECweb) remains squarely on ensuring our clients' infrastructure not only meets current demands but is robust enough to adapt to future uncertainties.\n\nThe warnings from city and environmental leaders regarding increased risks to infrastructure are not to be taken lightly within the industrial context. Changes in emissions standards can, over time, influence the generation mix, potentially impacting grid stability, energy costs, and even the frequency or intensity of extreme weather events that directly challenge our electrical grid. For Texas industries, this translates into a heightened imperative for proactive measures: assessing existing power distribution systems, investing in redundancy, implementing advanced monitoring, and ensuring compliance with evolving local and state mandates. AECweb stands ready to partner with businesses to fortify their electrical backbone, mitigating potential vulnerabilities and optimizing systems for sustained performance and operational continuity, irrespective of broader policy shifts.",
+    "original_title": "EPA poised to scrap power plant carbon standards",
+    "image": "images/blog/post_363.jpg"
+  },
+  {
     "id": 362,
     "date": "Sep 14, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "Virtual Power Plants (VPPs) are revolutionizing commercial and industrial electrical infrastructure in Texas, offering strategic advantages for operational resilience and optimized energy management.",
     "content": "The discourse around Virtual Power Plants (VPPs) often simplifies their immense value down to mere megawatts. While it is true that VPPs contribute vital power to the grid, the assertion that 'the megawatts are identical [but] the asset is not' encapsulates a profound truth: VPPs represent a paradigm shift in how we conceive and manage electrical infrastructure. Far from being monolithic generation facilities, VPPs are intricate, interconnected networks of distributed energy resources (DERs)\u2014ranging from rooftop solar arrays and battery energy storage systems (BESS) to smart building controls and electric vehicle charging stations\u2014orchestrated by sophisticated software. This distributed architecture inherently builds a layer of operational resilience unmatched by centralized plants, offering flexibility, redundancy, and localized support critical for robust commercial and industrial operations, particularly within the dynamic and often challenging ERCOT environment here in Texas.\n\nFor commercial and industrial enterprises across Texas, embracing VPPs transcends mere energy procurement; it is a strategic investment in business continuity and competitive advantage. AECweb understands that the true power of a VPP for C&I clients lies in its ability to enhance localized grid stability, mitigate peak demand charges through intelligent load management and energy arbitrage, and provide critical backup power during grid disruptions. These aggregated assets can participate in demand response programs, stabilize grid frequency, and even support islanding capabilities for critical facilities, ensuring essential operations continue uninterrupted during extreme weather events or grid strain. As Chief Electrical Engineers, we see VPPs not just as power sources, but as dynamic tools for optimizing energy expenditure, reducing carbon footprints, and fundamentally strengthening the electrical infrastructure that underpins Texas's economy. Partnering with AECweb ensures these complex, resilient systems are designed, installed, and managed with unparalleled expertise.",
     "original_title": "A VPP is a garden. Let\u2019s make them flourish nationwide.",
-    "image": "images/blog/post_343.jpg"
+    "image": "logo.png"
   },
   {
     "id": 342,
