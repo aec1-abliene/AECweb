@@ -1,5 +1,15 @@
 [
   {
+    "id": 389,
+    "date": "Sep 24, 2026",
+    "category": "Industrial Tech",
+    "title": "From Standby to Strategic: Elevating Microgrids for Texas's Industrial Future",
+    "summary": "EPRI's call to transform microgrids from passive emergency backup to active grid participants presents a pivotal opportunity for enhancing operational resilience and economic efficiency across Texas's commercial and industrial landscape.",
+    "content": "The recent insights shared by EPRI\u2019s Jackie Baum resonate deeply within the commercial and industrial electrical engineering community, particularly here in Texas. Baum\u2019s assertion that microgrids must move beyond sitting idle for emergencies and instead integrate into everyday grid operations signals a crucial paradigm shift. For too long, the immense potential of these decentralized energy systems has been largely confined to reactive disaster preparedness. As AECweb, we concur that this underutilization represents a missed opportunity to leverage significant infrastructure investments for continuous, proactive benefits. The future of grid resilience lies not just in having backup power, but in actively using and optimizing these resources to bolster overall system stability and performance, even when the primary grid is functioning normally.\n\nThis proactive approach to microgrid deployment holds profound implications for Texas\u2019s commercial and industrial sectors. Given the unique challenges of the ERCOT grid, including extreme weather volatility and escalating peak demand, integrating microgrids as active assets offers a robust pathway to enhanced operational continuity and economic advantage. Facilities can achieve significant cost savings through peak shaving, demand response participation, and optimized renewable energy integration. More importantly, this strategy fortifies businesses against grid disturbances, ensuring uninterrupted critical operations and safeguarding productivity. As Chief Electrical Engineer for Abilene Electrical Contractors, I emphasize that the expert design, installation, and intelligent control of these sophisticated systems are paramount to unlocking their full strategic value, transforming them into indispensable pillars of modern industrial infrastructure.",
+    "original_title": "Microgrids must push beyond pilots, into everyday grid operations: panel",
+    "image": "images/blog/post_389.jpg"
+  },
+  {
     "id": 388,
     "date": "Sep 24, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "As the national dialogue on electric vehicle adoption evolves, states are increasingly driving the imperative for electrification. For Texas's commercial and industrial sectors, this shift demands proactive, robust electrical infrastructure planning to ensure operational resilience and competitive advantage.",
     "content": "The landscape of electric vehicle (EV) adoption is subject to diverse national perspectives, yet the fundamental trajectory towards electrified transportation at the state and local level remains a critical consideration for commercial and industrial enterprises. While federal discussions may present a varied outlook, many states, including those poised for significant growth like Texas, are actively exploring pathways to integrate and expand EV infrastructure. This dynamic underscores a pivotal reality for businesses: the sustained demand for robust, scalable electrical infrastructure to support fleet electrification, employee charging, and specialized industrial EV applications. Ensuring that existing electrical systems can accommodate these new loads without compromising operational integrity is paramount.\n\nIn Texas, where energy demands are already substantial and grid resilience is a constant priority, the expansion of EV charging infrastructure presents both challenges and unparalleled opportunities. Commercial and industrial facilities must meticulously plan for increased power draws, considering everything from upgraded transformers and main service panels to sophisticated energy management systems. The integration of Level 2 and DC fast charging solutions, often coupled with renewable energy sources and battery storage, requires expert electrical engineering and installation to maintain power quality and minimize grid impact. Abilene Electrical Contractors (AECweb) specializes in designing and implementing these complex systems, ensuring that Texas businesses not only meet the growing demand for electrification but do so with an emphasis on operational resilience, scalability, and long-term cost efficiency. Proactive infrastructure upgrades are not merely about adoption; they are about securing a competitive, stable, and sustainable operational future.",
     "original_title": "Trump is stalling EV adoption. Here\u2019s how states can step up.",
-    "image": "images/blog/post_369.jpg"
+    "image": "logo.png"
   },
   {
     "id": 368,
