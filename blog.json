@@ -1,5 +1,15 @@
 [
   {
+    "id": 435,
+    "date": "Oct 13, 2026",
+    "category": "Industrial Tech",
+    "title": "Operational Resilience Imperative: Unpacking FERC's Stance on Grid Interconnection for Texas Industry",
+    "summary": "Recent federal regulatory action regarding large load interconnection plans underscores critical challenges for grid stability. For Texas commercial and industrial entities, this emphasizes the paramount need for robust electrical planning and proactive infrastructure development to ensure operational resilience.",
+    "content": "The Federal Energy Regulatory Commission's (FERC) recent rejection of a significant portion of PJM Interconnection's plan to manage large load interconnections marks a pivotal moment in the ongoing national dialogue surrounding grid stability and capacity. While PJM operates outside the Electric Reliability Council of Texas (ERCOT) jurisdiction, the underlying principles and FERC's stated reasons\u2014concerns over state jurisdiction and potential discrimination\u2014resonate deeply within Texas. Our state continues to experience unprecedented growth in commercial and industrial sectors, from new manufacturing facilities and data centers to expanding energy infrastructure. The integration of these substantial new electrical demands without corresponding generation and transmission upgrades presents a complex challenge, one that demands meticulous planning and adherence to evolving regulatory frameworks to prevent undue strain on our critical power infrastructure.\n\nFor Texas-based commercial and industrial clients, this development reinforces the absolute necessity of a proactive and sophisticated approach to electrical infrastructure. At Abilene Electrical Contractors (AECweb), we understand that operational resilience is not merely a goal but a foundational requirement for sustained success. Our expert engineers specialize in navigating the intricacies of large load integration within the ERCOT framework, conducting comprehensive interconnection studies, precise load forecasting, and designing scalable, robust electrical systems. We partner with businesses to ensure their facilities are not only compliant with current and anticipated regulations but are also equipped with the reliable, efficient power infrastructure essential to thrive in a dynamically evolving grid environment. Proactive engagement with experienced electrical contractors is paramount to safeguarding operations and contributing to the overall stability of the Texas grid.",
+    "original_title": "FERC rejects most of PJM\u2019s large load interconnection plan",
+    "image": "images/blog/post_435.jpg"
+  },
+  {
     "id": 434,
     "date": "Oct 12, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "Leading industrial and commercial facilities in Texas are leveraging integrated energy solutions like geothermal and advanced HVAC to achieve unparalleled operational resilience and energy efficiency, safeguarding critical operations against grid volatility and rising costs.",
     "content": "In the demanding landscape of modern commercial and industrial operations, particularly within Texas, the need for robust, resilient, and energy-efficient electrical infrastructure has never been more critical. The recent case study highlighting a biotech building's success through simultaneous heating and cooling paired with geothermal usage offers a powerful blueprint for facilities across the Lone Star State. At Abilene Electrical Contractors (AECweb), we recognize that complex environmental control requirements, common in sectors like biotech, data centers, and advanced manufacturing, necessitate sophisticated electrical designs that mitigate risk and optimize performance.\n\nThe integration of geothermal energy systems is not merely an energy-saving measure; it is a strategic investment in operational resilience. By significantly reducing reliance on conventional grid power for primary heating and cooling loads, facilities can achieve greater stability, lower operating costs, and a reduced carbon footprint. For Texas businesses continually seeking to bolster their defenses against extreme weather events and grid fluctuations, designing electrical systems that seamlessly incorporate such renewable and efficient technologies is paramount. Our expertise at AECweb lies in engineering these intricate electrical ecosystems, ensuring that the power infrastructure underpinning advanced HVAC and geothermal solutions is not only efficient but also supremely reliable, future-proof, and designed for ultimate continuity.",
     "original_title": "Case study: How a biotech building\u2019s design achieved an owner\u2019s energy goals",
-    "image": "images/blog/post_415.jpg"
+    "image": "logo.png"
   },
   {
     "id": 414,
