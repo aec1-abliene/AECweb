@@ -1,5 +1,15 @@
 [
   {
+    "id": 473,
+    "date": "Oct 26, 2026",
+    "category": "Industrial Tech",
+    "title": "Leveraging AI for Unprecedented Operational Resilience in Texas Electrical Infrastructure",
+    "summary": "Arrowfly's new AI for Engineers initiative signals a pivotal shift, offering unprecedented tools to bolster the resilience and efficiency of Texas's critical commercial and industrial electrical systems. AECweb is prepared to integrate these advancements for superior client solutions.",
+    "content": "The recent announcement from Arrowfly, parent company of the highly respected *Consulting-Specifying Engineer* publication, regarding their new \u2018AI for Engineers\u2019 initiative marks a significant advancement in our sector. This comprehensive, year-round program, uniting a dedicated news desk, flagship conferences, original research, and an expert advisory board, is poised to redefine how we approach electrical system design, implementation, and maintenance. For Abilene Electrical Contractors, this signifies a crucial evolution towards leveraging artificial intelligence to achieve unparalleled levels of operational resilience and efficiency across Texas\u2019s diverse commercial and industrial landscape.\n\nThe implications for Texas\u2019s commercial and industrial electrical infrastructure are profound. With AI-driven tools, we are moving beyond reactive maintenance to predictive failure analysis, identifying potential vulnerabilities in critical switchgear, transformers, and distribution networks before they escalate into costly downtime. This technology enables optimized system designs that inherently account for the unique challenges of the Texas grid\u2014from extreme weather events and fluctuating loads to the increasing integration of renewable energy sources. Furthermore, AI enhances energy management strategies, optimizes facility operations for peak performance and sustainability, and provides a robust framework for real-time anomaly detection, safeguarding against disruptions. AECweb is committed to harnessing these cutting-edge AI capabilities to ensure our clients in Texas benefit from robust, intelligent, and highly resilient electrical systems designed for the future.",
+    "original_title": "Consulting-Specifying Engineer Parent Company Arrowfly Launches AI for Engineers",
+    "image": "images/blog/post_473.jpg"
+  },
+  {
     "id": 472,
     "date": "Oct 25, 2026",
     "category": "Industrial Tech",
@@ -197,7 +207,7 @@
     "summary": "Modern utility customer portals are evolving into critical operational intelligence platforms, empowering Texas's commercial and industrial sectors to bolster resilience and optimize complex electrical infrastructure.<br><br>These digital tools provide vital data, enabling proactive management of power systems and strategic response to grid conditions.",
     "content": "The concept of a 'well-designed customer portal' for utilities often brings to mind simplified billing and basic service requests. However, as Chief Electrical Engineer and Content Strategist for Abilene Electrical Contractors (AECweb), we recognize a far more profound implication for the commercial and industrial (C&I) sectors, particularly within Texas. These advanced digital interfaces are rapidly transforming into indispensable operational intelligence hubs. They provide C&I clients with unprecedented access to real-time energy consumption data, immediate outage notifications, and transparent grid performance metrics, directly influencing critical business outcomes related to uptime, efficiency, and safety.\n\nFor Texas businesses, where grid stability can be challenged by extreme weather and an evolving energy landscape, leveraging these portals is paramount for operational resilience. This data empowers facility managers and operational leaders to make informed decisions regarding their internal electrical infrastructure: strategically deploying backup generation, optimizing load shedding for demand-response participation, and validating the performance of critical systems like UPS and switchgear. At AECweb, we understand that merely having data isn't enough; it's about integrating this intelligence into actionable electrical infrastructure strategies. We partner with our clients to design, install, and maintain robust systems that can proactively respond to grid conditions, ensuring sustained operations and mitigating financial risks posed by power disruptions. These portals are not just about utility outcomes; they are about enhancing the fundamental reliability and adaptability of every commercial and industrial facility we serve across Texas.",
     "original_title": "Uncover the utility outcomes you can influence with your customer portal",
-    "image": "images/blog/post_453.jpg"
+    "image": "logo.png"
   },
   {
     "id": 452,
