@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>City of Wichita Falls - Plant 61 Filter Rehab | Electrical & I&C Engineering Package</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-glow: rgba(37, 99, 235, 0.15);
+      --success: #059669;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --surface: #ffffff;
+      --surface-subtle: #f8fafc;
+      --surface-card: #ffffff;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-inverse: #ffffff;
+      --radius: 12px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    /* Global Box-Sizing & Viewport Guard */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Top Banner / Project Context */
+    .top-header {
+      background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+      color: var(--text-inverse);
+      padding: clamp(16px, 2.5vw, 24px) 0;
+      border-bottom: 3px solid #3a506b;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+    }
+
+    .header-container {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 clamp(14px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .header-top-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1 1 320px;
+      min-width: 0;
+    }
+
+    .brand-title h1 {
+      font-size: clamp(1.2rem, 2vw + 0.5rem, 1.85rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.25;
+      word-break: break-word;
+    }
+
+    .brand-title p {
+      font-size: clamp(0.82rem, 0.9vw + 0.35rem, 0.98rem);
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .scope-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 99, 235, 0.25);
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: clamp(0.72rem, 0.8vw + 0.3rem, 0.82rem);
+      font-weight: 700;
+      color: #93c5fd;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .header-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: clamp(0.7rem, 0.7vw + 0.3rem, 0.78rem);
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      white-space: nowrap;
+    }
+
+    .badge-accent {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #3b82f6;
+    }
+
+    .badge-warning {
+      background: #b45309;
+      color: #fef3c7;
+      border-color: #d97706;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(14px, 3vw, 32px);
+      gap: 12px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px 0;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: clamp(0.78rem, 0.8vw + 0.4rem, 0.88rem);
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: none;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .nav-tab:hover {
+      color: var(--text-main);
+      background: var(--surface-subtle);
+    }
+
+    .nav-tab.active {
+      color: var(--accent);
+      background: var(--accent-glow);
+      border-color: rgba(37, 99, 235, 0.25);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Main Container */
+    .main-container {
+      width: 100%;
+      max-width: 1600px;
+      margin: clamp(16px, 2.5vw, 28px) auto;
+      padding: 0 clamp(14px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(16px, 2.5vw, 24px);
+      min-width: 0;
+    }
+
+    /* Tab Content Panels */
+    .tab-panel {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .tab-panel.active {
+      display: flex;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(16px, 2.5vw, 24px);
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+      min-width: 0;
+    }
+
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: clamp(1.05rem, 1.2vw + 0.5rem, 1.25rem);
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-subtitle {
+      font-size: clamp(0.8rem, 0.8vw + 0.35rem, 0.88rem);
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* KPI Grid - Responsive Breakpoints */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(12px, 1.8vw, 18px);
+      width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+    }
+
+    .kpi-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(14px, 2vw, 20px);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .kpi-card.kpi-prime::before { background: #7c3aed; }
+    .kpi-card.kpi-self::before { background: #059669; }
+    .kpi-card.kpi-conduit::before { background: #d97706; }
+    .kpi-card.kpi-wire::before { background: #0284c7; }
+
+    .kpi-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .kpi-value {
+      font-size: clamp(1.35rem, 1.8vw + 0.4rem, 1.85rem);
+      font-weight: 800;
+      color: var(--text-main);
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.2;
+    }
+
+    .kpi-subtext {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    /* Architecture Grid */
+    .architecture-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    @media (max-width: 860px) {
+      .architecture-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Callout Alert */
+    .callout {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: clamp(12px, 2vw, 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .callout-title {
+      font-size: clamp(0.88rem, 0.9vw + 0.35rem, 0.98rem);
+      font-weight: 700;
+      color: #1e40af;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .callout-text {
+      font-size: clamp(0.82rem, 0.8vw + 0.35rem, 0.88rem);
+      color: #1e3a8a;
+      line-height: 1.55;
+    }
+
+    /* Filters & Search Toolbar */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1 1 280px;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 8px 12px 8px 36px;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      font-size: clamp(0.82rem, 0.8vw + 0.35rem, 0.88rem);
+      outline: none;
+      transition: border-color 0.15s ease;
+      background: #ffffff;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      flex: 1 1 auto;
+    }
+
+    .filter-pill {
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: clamp(0.72rem, 0.7vw + 0.3rem, 0.78rem);
+      font-weight: 600;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .filter-pill:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+
+    .filter-pill.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    /* Table System with Horizontal Scroll Guard */
+    .table-container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      position: relative;
+    }
+
+    .table-scroll-hint {
+      display: none;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      font-weight: 500;
+    }
+
+    @media (max-width: 1024px) {
+      .table-scroll-hint { display: block; }
+    }
+
+    table {
+      width: 100%;
+      min-width: 800px;
+      border-collapse: collapse;
+      font-size: clamp(0.78rem, 0.8vw + 0.4rem, 0.85rem);
+      text-align: left;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #f8fafc;
+      padding: clamp(8px, 1.2vw, 12px) clamp(10px, 1.5vw, 14px);
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    td {
+      padding: clamp(8px, 1vw, 11px) clamp(10px, 1.5vw, 14px);
+      border-bottom: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    tr:hover td {
+      background-color: #f1f5f9;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .num {
+      text-align: right;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .tag-conduit { background: #fef3c7; color: #92400e; }
+    .tag-wire { background: #e0f2fe; color: #0369a1; }
+    .tag-fittings { background: #f3e8ff; color: #6b21a8; }
+    .tag-power { background: #dcfce7; color: #15803d; }
+    .tag-ic { background: #fae8ff; color: #86198f; }
+    .tag-actuator { background: #ffedd5; color: #9a3412; }
+    .tag-demo { background: #fee2e2; color: #991b1b; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: clamp(0.78rem, 0.8vw + 0.35rem, 0.84rem);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface-subtle);
+      border-color: var(--border-dark);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    /* Calculator Grid */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    @media (max-width: 960px) {
+      .calc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 540px) {
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+
+    /* RFQ & RFI Accordion Cards */
+    .accordion-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+    }
+
+    .accordion-header {
+      padding: clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 20px);
+      background: #ffffff;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid transparent;
+      transition: background 0.15s ease;
+    }
+
+    .accordion-header:hover {
+      background: #f8fafc;
+    }
+
+    .accordion-header.active {
+      border-bottom-color: var(--border);
+      background: #f8fafc;
+    }
+
+    .accordion-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1 1 280px;
+      min-width: 0;
+    }
+
+    .accordion-title {
+      font-size: clamp(0.92rem, 1vw + 0.4rem, 1.05rem);
+      font-weight: 700;
+      color: var(--text-main);
+      word-break: break-word;
+    }
+
+    .accordion-meta {
+      font-size: clamp(0.75rem, 0.7vw + 0.35rem, 0.82rem);
+      color: var(--text-muted);
+    }
+
+    .accordion-body {
+      display: none;
+      padding: clamp(14px, 2.5vw, 20px);
+      background: #ffffff;
+      flex-direction: column;
+      gap: 16px;
+      font-size: clamp(0.82rem, 0.8vw + 0.4rem, 0.88rem);
+      line-height: 1.6;
+    }
+
+    .accordion-body.active {
+      display: flex;
+    }
+
+    .pre-block {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: clamp(12px, 2vw, 16px);
+      border-radius: var(--radius-sm);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(0.72rem, 0.8vw + 0.35rem, 0.82rem);
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      width: 100%;
+    }
+
+    /* Global Print Stylesheet */
+    @media print {
+      .top-header, .nav-bar, .toolbar, .btn, .table-scroll-hint { display: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      .card { border: none !important; box-shadow: none !important; padding: 0 !important; }
+      .tab-panel { display: flex !important; page-break-after: always; }
+      .accordion-body { display: flex !important; }
+      .pre-block { background: #f8fafc !important; color: #000000 !important; border: 1px solid #cbd5e1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner / Project Info -->
+  <header class="top-header">
+    <div class="header-container">
+      <div class="header-top-row">
+        <div class="brand-title">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span class="scope-pill">Division 26 & 40 Only</span>
+            <span class="badge badge-accent">Sole-Source Prime Controls</span>
+          </div>
+          <h1>City of Wichita Falls — Plant 61 Filter Rehabilitation Improvements</h1>
+          <p>Comprehensive Electrical & Instrumentation Engineering Package | Bid & Takeoff Master</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge">Contract: CWF 26-565</span>
+          <span class="badge">Bid No. 26-44</span>
+          <span class="badge">B&V Proj No. 425771</span>
+          <span class="badge badge-warning">Addendum No. 1 Incorporated</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Responsive Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div class="nav-tabs" role="tablist">
+        <button class="nav-tab active" onclick="switchTab('tab-overview')">Executive Overview</button>
+        <button class="nav-tab" onclick="switchTab('tab-bom')">Option 1: Electrical BOM & Takeoff</button>
+        <button class="nav-tab" onclick="switchTab('tab-bid')">Option 2: Attachment A Bid Pricing</button>
+        <button class="nav-tab" onclick="switchTab('tab-rfq')">Option 3: Vendor & Sub RFQs</button>
+        <button class="nav-tab" onclick="switchTab('tab-rfi')">Option 4: Pre-Bid RFIs</button>
+        <button class="nav-tab" onclick="switchTab('tab-matrix')">Drawing & Spec Matrix</button>
+      </div>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" onclick="window.print()">Print / PDF</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Layout -->
+  <main class="main-container">
+
+    <!-- ======================================================== -->
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <!-- ======================================================== -->
+    <section id="tab-overview" class="tab-panel active">
+      
+      <!-- Scope Sentinel Callout -->
+      <div class="callout">
+        <div class="callout-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Strictly Electrical (Division 26) & Instrumentation/Controls (Division 40) Scope
+        </div>
+        <div class="callout-text">
+          Per directive, this entire engineering package, takeoff model, bid pricing breakdown, subcontractor RFQ packages, and pre-bid RFIs have been audited and filtered to encompass <strong>EXCLUSIVELY</strong> the electrical power, raceways, lighting, valve actuator electrical connections, instrument loops, and sole-source Prime Controls automation. All general civil, filter media, washwater troughs, surface wash piping, paint/sandblast, and concrete repair pay items have been cleanly isolated and removed.
+        </div>
+      </div>
+
+      <!-- Electrical Key Performance Indicators (KPIs) -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">Total Electrical Package</span>
+          <span class="kpi-value">$1,938,000.00</span>
+          <span class="kpi-subtext">Pay Item 8, Pay Item 4, Actuator Elec, Demo</span>
+        </div>
+        <div class="kpi-card kpi-self">
+          <span class="kpi-label">Self-Perform Electrical</span>
+          <span class="kpi-value">$788,000.00</span>
+          <span class="kpi-subtext">Direct Electrical Labor, Conduit, Wire & Pedestals</span>
+        </div>
+        <div class="kpi-card kpi-prime">
+          <span class="kpi-label">Prime Controls Subcontract</span>
+          <span class="kpi-value">$1,150,000.00</span>
+          <span class="kpi-subtext">Mandatory Sole-Source Integrator (Spec 40 61 11)</span>
+        </div>
+        <div class="kpi-card kpi-conduit">
+          <span class="kpi-label">Rigid Steel Conduit (GRC/LFMC)</span>
+          <span class="kpi-value">10,640 LF</span>
+          <span class="kpi-subtext">2-1/2" Discrete, 2" Analog, 1", 3/4" Branch</span>
+        </div>
+        <div class="kpi-card kpi-wire">
+          <span class="kpi-label">Conductor & Cable Pulls</span>
+          <span class="kpi-value">140,340 LF</span>
+          <span class="kpi-subtext">#14 AWG, #12 AWG, #16 Shielded, Fiber & Cat6</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Filter Control Panels</span>
+          <span class="kpi-value">4 Panels (8 Cells)</span>
+          <span class="kpi-subtext">FCP-1..4 with 15" PanelView Plus 7 Touch OITs</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Actuator Hookups & Pedestals</span>
+          <span class="kpi-value">33 Units</span>
+          <span class="kpi-subtext">Type 316 SS Floor Stands (E-01-701 Detail A)</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Linear Wet-Location LED</span>
+          <span class="kpi-value">32 Fixtures</span>
+          <span class="kpi-subtext">Pay Item 8: Gallery Lighting Replacement</span>
+        </div>
+      </div>
+
+      <!-- Electrical Architecture Overview Cards -->
+      <div class="architecture-grid">
+        
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Master Raceway & Cabling Infrastructure</h3>
+              <p class="card-subtitle">Sheet E-01-102, E-01-602, E-01-603, Spec 26 05 11</p>
+            </div>
+          </div>
+          <ul style="padding-left:20px; display:flex; flex-direction:column; gap:8px; font-size:0.88rem;">
+            <li><strong>Power & Discrete Control Master Trunk:</strong> <code>70#14, #12G in 2-1/2" GRC</code> spanning 1,280 LF along gallery pipe racks from FCPs to field junction boxes.</li>
+            <li><strong>Analog Instrumentation Master Trunk:</strong> <code>14-1PR#16 Shielded in 2" GRC</code> spanning 1,120 LF dedicated to 4-20mA analog signal loops.</li>
+            <li><strong>Valve Actuator Power & Interlock Feeds:</strong> <code>10#14, #12G in 1" GRC</code> (1,440 LF) dropping from field J-boxes to individual pneumatic actuator stations.</li>
+            <li><strong>Local Hand Stations & Limit Switches:</strong> <code>6#14, #12G in 3/4" GRC</code> (3,850 LF) and <code>3/4" LFMC</code> flex drops to solenoids and positioners.</li>
+            <li><strong>All Unistrut Racks & Fasteners:</strong> Mandated Type 316 Stainless Steel per Spec 26 05 83 (1,850 LF of 1-5/8" strut and 420 cantilever brackets).</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Power Feed & Panel LP6 Circuiting</h3>
+              <p class="card-subtitle">Addendum No. 1 Revisions | Sheet E-01-102</p>
+            </div>
+          </div>
+          <ul style="padding-left:20px; display:flex; flex-direction:column; gap:8px; font-size:0.88rem;">
+            <li><strong>Source Panelboard:</strong> Existing Lighting Panel LP6 located in the Filter Building Electrical Room.</li>
+            <li><strong>Addendum 1 Revision:</strong> Sheet E-01-102 revised to re-circuit pipe gallery branch lighting and panel power into LP6.</li>
+            <li><strong>New Breakers Required:</strong> Eight (8) new 20A 1-Pole bolt-on breakers (Eaton BAB type) furnished and installed into LP6 spare slots.</li>
+            <li><strong>Emergency Battery Inverters:</strong> Eight (8) 90-minute wet-location battery backup inverter units integrated into pipe gallery exit paths and stairways.</li>
+            <li><strong>Stairway Lighting Controls:</strong> Four (4) 3-way weatherproof switch assemblies (S3A) installed at gallery stair access points.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Sole-Source Prime Controls Demarcation</h3>
+              <p class="card-subtitle">Specification Section 40 61 11 & Addendum 1 Q&A #12</p>
+            </div>
+          </div>
+          <ul style="padding-left:20px; display:flex; flex-direction:column; gap:8px; font-size:0.88rem;">
+            <li><strong>Mandatory Sole-Source Integrator:</strong> Prime Controls is designated without substitution as the single-source I&C supplier ($1,150,000 allowance/subcontract).</li>
+            <li><strong>Prime Controls Scope:</strong> 4x dual-cell Filter Control Panels (Allen-Bradley ControlLogix 1756-L81E), 4x 15" PanelView Plus 7 Touch OITs, N-Tron managed switches, SolaHD industrial UPS, all primary instruments (Hach TU5300sc turbidimeters, Rosemount 3051S DP transmitters, Siemens ultrasonic level, Rosemount magmeters), Wonderware SCADA screen programming, factory testing (FAT), and site commissioning (SAT).</li>
+            <li><strong>Electrical Contractor Scope:</strong> Physical unloading, setting, and anchoring of panels; furnishing and installing all conduits, field junction boxes, and wiring; pulling cables; terminations; and instrument tube rack mounting.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Magmeter Grounding Ring & Cathodic Loop</h3>
+              <p class="card-subtitle">Sheet E-01-102 Keynote 3 & Spec 26 05 11</p>
+            </div>
+          </div>
+          <ul style="padding-left:20px; display:flex; flex-direction:column; gap:8px; font-size:0.88rem;">
+            <li><strong>Grounding Mandate:</strong> Keynote 3 requires connecting the flow tube grounding lugs of all eight (8) 14" Filter Effluent Magmeters (FIT-010..040) and the 24" Washwater Supply Magmeter (FIT-001) to the existing plant ground ring.</li>
+            <li><strong>Conductor:</strong> 640 LF of #6 AWG bare stranded copper conductor routed along pipe gallery stanchions.</li>
+            <li><strong>Connections:</strong> Burndy heavy-duty 2-hole compression lugs on flow tubes and exothermic welds / grounding clamps to existing structural steel and electrode ring.</li>
+            <li><strong>Significance:</strong> Essential to prevent stray electrochemical potential drift in magnetic flow tube mV electrodes.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 2: OPTION 1 - ELECTRICAL BOM & TAKEOFF -->
+    <!-- ======================================================== -->
+    <section id="tab-bom" class="tab-panel">
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Itemized Electrical & I&C Bill of Materials (BOM)</h2>
+            <p class="card-subtitle">Quantified linear footages, raceways, conductors, fittings, enclosures, and equipment</p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-primary" onclick="downloadBOMCSV()">Download Electrical BOM CSV</button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="toolbar">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="bom-search" class="search-input" placeholder="Search by item, description, spec, drawing..." oninput="filterBOM()">
+          </div>
+          <div class="filter-pills" id="bom-filters">
+            <button class="filter-pill active" onclick="setBOMFilter('All')">All Categories</button>
+            <button class="filter-pill" onclick="setBOMFilter('Conduit & Raceway')">Conduit & Raceway</button>
+            <button class="filter-pill" onclick="setBOMFilter('Conductors & Cables')">Conductors & Cables</button>
+            <button class="filter-pill" onclick="setBOMFilter('Fittings & Hardware')">Fittings & Hardware</button>
+            <button class="filter-pill" onclick="setBOMFilter('Power & Lighting')">Power & Lighting</button>
+            <button class="filter-pill" onclick="setBOMFilter('I&C Systems Package')">I&C Systems Package</button>
+            <button class="filter-pill" onclick="setBOMFilter('Actuator Hookups')">Actuator Hookups</button>
+            <button class="filter-pill" onclick="setBOMFilter('Electrical Demolition')">Electrical Demolition</button>
+          </div>
+        </div>
+
+        <!-- BOM Table -->
+        <div class="table-container">
+          <div class="table-scroll-hint">← Swipe or scroll horizontally to view all takeoff columns →</div>
+          <table id="bom-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Item #</th>
+                <th>Description</th>
+                <th>Drawing / Spec Ref</th>
+                <th>Size / Rating</th>
+                <th>Unit</th>
+                <th class="num">Quantity</th>
+                <th class="num">Mat Unit $</th>
+                <th class="num">Lab Hrs/Unit</th>
+                <th class="num">Ext Material $</th>
+                <th class="num">Ext Labor Hrs</th>
+              </tr>
+            </thead>
+            <tbody id="bom-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+            <tfoot>
+              <tr style="background:#f8fafc; font-weight:700;">
+                <td colspan="6">TOTAL ELECTRICAL & I&C BOM TAKEOFF:</td>
+                <td class="num mono" id="bom-total-qty">--</td>
+                <td colspan="2"></td>
+                <td class="num mono" id="bom-total-mat">$1,295,950.00</td>
+                <td class="num mono" id="bom-total-lab">6,373.7 hrs</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 3: OPTION 2 - ATTACHMENT A BID PRICING BREAKDOWN -->
+    <!-- ======================================================== -->
+    <section id="tab-bid" class="tab-panel">
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Attachment A Bid Pricing Model (Electrical & I&C Scope)</h2>
+            <p class="card-subtitle">Cost estimation model aligned directly to City of Wichita Falls Pay Items</p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-primary" onclick="downloadBidCSV()">Download Electrical Bid CSV</button>
+          </div>
+        </div>
+
+        <!-- Margin / Markup Interactive Estimator Widget -->
+        <div class="card" style="background:#f8fafc; border:1px solid #cbd5e1; margin-bottom:20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+            <h4 style="font-size:0.95rem; font-weight:700; color:#1e293b;">Interactive Bid Margin & Overhead Adjustment Calculator</h4>
+            <span class="badge badge-accent" id="calc-bid-total">$1,938,000.00 Base Bid</span>
+          </div>
+          <div class="calc-grid">
+            <div>
+              <label style="font-size:0.78rem; font-weight:600; color:#475569;">Overhead Markup (%): <span id="val-overhead">10%</span></label>
+              <input type="range" id="range-overhead" min="0" max="25" value="10" step="1" style="width:100%; margin-top:6px;" oninput="recalcBid()">
+            </div>
+            <div>
+              <label style="font-size:0.78rem; font-weight:600; color:#475569;">Profit Margin (%): <span id="val-profit">8%</span></label>
+              <input type="range" id="range-profit" min="0" max="25" value="8" step="1" style="width:100%; margin-top:6px;" oninput="recalcBid()">
+            </div>
+            <div>
+              <label style="font-size:0.78rem; font-weight:600; color:#475569;">Contingency Reserve (%): <span id="val-contingency">5%</span></label>
+              <input type="range" id="range-contingency" min="0" max="15" value="5" step="1" style="width:100%; margin-top:6px;" oninput="recalcBid()">
+            </div>
+            <div style="display:flex; flex-direction:column; justify-content:center;">
+              <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:#64748b;">Target Adjusted Electrical Bid</span>
+              <span style="font-size:clamp(1.2rem, 1.5vw + 0.3rem, 1.55rem); font-weight:800; color:#2563eb; font-family:'JetBrains Mono', monospace;" id="calc-adjusted-bid">$2,383,740.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bid Items Table -->
+        <div class="table-container">
+          <div class="table-scroll-hint">← Swipe or scroll horizontally to view all cost columns →</div>
+          <table id="bid-table">
+            <thead>
+              <tr>
+                <th>Scope Code</th>
+                <th>City Pay Item Ref</th>
+                <th>Description</th>
+                <th>Unit</th>
+                <th class="num">Direct Labor $</th>
+                <th class="num">Materials $</th>
+                <th class="num">Subcontract $</th>
+                <th class="num">Equip/Misc $</th>
+                <th class="num">Total Amount $</th>
+                <th>Self-Perform</th>
+                <th>Technical Scope Notes</th>
+              </tr>
+            </thead>
+            <tbody id="bid-table-body">
+              <!-- Rendered via JS -->
+            </tbody>
+            <tfoot>
+              <tr style="background:#f8fafc; font-weight:700;">
+                <td colspan="4">TOTAL ELECTRICAL BID PACKAGE:</td>
+                <td class="num mono">$483,500.00</td>
+                <td class="num mono">$210,500.00</td>
+                <td class="num mono">$1,150,000.00</td>
+                <td class="num mono">$94,000.00</td>
+                <td class="num mono" style="color:#2563eb;">$1,938,000.00</td>
+                <td colspan="2">Self-Perform: $788,000.00 (40.7%) | Prime Controls Sub: $1,150,000.00 (59.3%)</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 4: OPTION 3 - VENDOR & SUBCONTRACTOR RFQ PACKAGES -->
+    <!-- ======================================================== -->
+    <section id="tab-rfq" class="tab-panel">
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Vendor & Subcontractor Request for Quotation (RFQ) Packages</h2>
+            <p class="card-subtitle">Complete, ready-to-issue scope packages for Prime Controls and major electrical vendors</p>
+          </div>
+        </div>
+
+        <!-- RFQ 1: Prime Controls -->
+        <div class="accordion-card">
+          <div class="accordion-header active" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">Package E-RFQ-01: Sole-Source System Integrator Scope (Prime Controls)</span>
+              <span class="accordion-meta">Target Subcontractor: Prime Controls, LP | Specification Divisions 40 61 11, 40 64 00, 40 66 11, 40 67 11, 40 68 83, 40 70 00</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfq1-text', event)">Copy RFQ Text</button>
+          </div>
+          <div class="accordion-body active">
+            <p><strong>Scope Overview:</strong> Prime Controls is the designated, non-substitutable sole-source Control System Integrator for the City of Wichita Falls Plant 61 Filter Rehabilitation project per Specification Section 40 61 11 and Addendum No. 1 Q&A #12. This quotation package defines all hardware, software, engineering, testing, and commissioning required for a complete operational filter control system.</p>
+            <div class="pre-block" id="rfq1-text">REQUEST FOR QUOTATION (RFQ) - SYSTEM INTEGRATION PACKAGE
+PROJECT: City of Wichita Falls, Texas - Plant 61 Filter Rehabilitation Improvements
+CONTRACT: CWF 26-565 | BID NO. 26-44 | B&V PROJECT NO. 425771
+ATTN: Prime Controls, LP (Houston / Lewisville / Dallas Offices)
+
+SCOPE OF WORK & DELIVERABLES:
+1. FILTER CONTROL PANELS (FCP-1, FCP-2, FCP-3, FCP-4):
+   - Furnish four (4) NEMA 4X Type 316 stainless steel dual-cell Filter Control Panels.
+   - Dual Allen-Bradley ControlLogix PACs (1756-L81E), redundant power supplies, 1756 I/O modules.
+   - SolaHD 1kVA true online industrial DIN-rail UPS with 30-min full load battery backup.
+   - Panel-mounted N-Tron managed gigabit industrial Ethernet switches (8-port fiber/copper).
+   - PanelView Plus 7 Performance 15" color graphic touchscreen OITs (4 units) configured per Spec 40 64 00.
+
+2. PRIMARY INSTRUMENTATION SUPPLY:
+   - Eight (8) Hach TU5300sc online laser turbidimeters with SC200 controllers (AIT-010..040).
+   - Eight (8) Rosemount 3051S differential pressure transmitters (Loss of Head, PDIT-010..040) with 3-valve manifolds.
+   - Eight (8) Siemens HydroRanger 200 HMI with Echomax ultrasonic level transducers (LIT-010..040).
+   - Eight (8) 14" Rosemount 8750W flanged electromagnetic flow meters (Effluent, FIT-010..040).
+   - One (1) 24" Rosemount 8750W flanged electromagnetic flow meter (Washwater, FIT-001).
+
+3. SOFTWARE & SCADA INTEGRATION:
+   - Complete PLC ladder logic for 8 filter cells (filtration, ripening, backwash sequences, surface wash, loss-of-head).
+   - Wonderware System Platform / InTouch HMI graphic screen development matching City of Wichita Falls standards.
+   - Factory Acceptance Testing (FAT) at Prime Controls facility with Engineer and City representatives.
+   - Site Acceptance Testing (SAT), loop tuning, calibration certification, and 40 hours of on-site operations training.
+   - Mandatory two (2) year comprehensive hardware and software warranty from final acceptance.
+
+SUBMITTAL REQUIREMENTS:
+- Submit formal firm fixed price quotation, bill of materials, and payment milestone schedule.
+- Include confirmation of compliance with Spec 40 61 11 and Addendum 1 revisions.</div>
+          </div>
+        </div>
+
+        <!-- RFQ 2: Electrical Supply House Commodity Package -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">Package E-RFQ-02: Electrical Supply House Commodity Package (GRC, Wire, Strut & Fittings)</span>
+              <span class="accordion-meta">Target Vendors: Graybar, CED, Rexel, Crawford Electric | Specification Section 26 05 11, 26 05 83</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfq2-text', event)">Copy RFQ Text</button>
+          </div>
+          <div class="accordion-body">
+            <p><strong>Scope Overview:</strong> Bulk electrical raceway, conductor, stainless steel support channel, and watertight NEMA 4X fittings package for pipe gallery installation.</p>
+            <div class="pre-block" id="rfq2-text">REQUEST FOR QUOTATION (RFQ) - ELECTRICAL RACEWAY, WIRE & HARDWARE PACKAGE
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab (CWF 26-565)
+TARGET SUPPLIERS: Graybar Electric / Consolidated Electrical Distributors (CED) / Rexel
+
+MATERIAL SPECIFICATION & QUANTITY LIST:
+1. RIGID CONDUIT & FITTINGS:
+   - 1,280 LF: 2-1/2" Galvanized Rigid Steel Conduit (GRC) with thread protectors
+   - 1,120 LF: 2" GRC Conduit
+   - 1,440 LF: 1" GRC Conduit
+   - 6,180 LF: 3/4" GRC Conduit
+   - 620 LF: 3/4" Liquidtight Flexible Metallic Conduit (LFMC, Anaconda Sealtite UA)
+   - 320 EA: Myers NEMA 4X Scru-Tite Watertight Grounding Hubs (3/4" to 2-1/2")
+   - 210 EA: Form 8 Cast Iron Conduit Bodies with stamped covers & neoprene gaskets (LB, T, LL, LR)
+   - 24 EA: Crouse-Hinds XD/XJ Conduit Expansion & Deflection Couplings (3/4" to 2-1/2")
+
+2. COPPER CONDUCTORS & INSTRUMENT CABLES:
+   - 96,400 LF: #14 AWG THHN/THWN-2 Stranded Copper (600V, Simpull or equal)
+   - 19,000 LF: #12 AWG THHN/THWN-2 Stranded Copper
+   - 21,500 LF: #16 AWG 1-Pair Overall Shielded Twisted Pair Instrument Cable (Belden 8719 or equal, 100% foil shield)
+   - 640 LF: #6 AWG Bare Stranded Copper Grounding Conductor
+   - 1,600 LF: 6-Strand 50/125um OM3 Multi-Mode Armored Tight-Buffered Fiber Optic Cable (Corning ALTOS)
+   - 1,200 LF: Industrial Category 6 Shielded Twisted Pair (Cat6 STP, Belden 7953A)
+
+3. 316 STAINLESS STEEL STRUT & SUPPORTS:
+   - 1,850 LF: 1-5/8" x 1-5/8" 12-Gauge Type 316 Stainless Steel Slotted Unistrut Channel
+   - 420 EA: 316 Stainless Steel Cantilever Brackets (12" and 18")
+   - 850 PR: 316 Stainless Steel 2-Piece Conduit Clamps (3/4" to 2-1/2")
+   - 1,200 EA: 316 Stainless Steel 1/2" Wedge Anchors (Hilti KB-TZ2)
+
+PACKAGING & DELIVERY:
+- All material delivered to Wichita Falls, TX in phased master spool releases.</div>
+          </div>
+        </div>
+
+        <!-- RFQ 3: Industrial LED Lighting Package -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">Package E-RFQ-03: Industrial LED Lighting Package (City Pay Item 8 Complete)</span>
+              <span class="accordion-meta">Target Vendors: Hubbell Killark, Crouse-Hinds, Kenall, Holophane | Sheet E-01-102 Addendum 1, Spec 26 05 11</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfq3-text', event)">Copy RFQ Text</button>
+          </div>
+          <div class="accordion-body">
+            <p><strong>Scope Overview:</strong> Complete supply of industrial wet-location IP66 LED fixtures, emergency battery inverters, 3-way switches, and Panel LP6 bolt-on circuit breakers.</p>
+            <div class="pre-block" id="rfq3-text">REQUEST FOR QUOTATION (RFQ) - INDUSTRIAL LIGHTING PACKAGE
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab (CWF 26-565)
+SCOPE: Pay Item 8 - Removal and Replacement of Light Fixtures
+
+ITEMS REQUIRED:
+1. 32 EA: Industrial 4-Foot Linear LED Vapor-Tight Fixtures (Type 1):
+   - IP66 / NEMA 4X wet-location rated, 45W, minimum 5,000 lumens, 4000K CCT, >80 CRI.
+   - Fiberglass-reinforced polyester housing with impact-resistant acrylic diffuser and 316 SS latches.
+   - Universal 120-277V 0-10V dimmable electronic driver. Hubbell / Crouse-Hinds / Kenall.
+
+2. 8 EA: Integral / Remote Emergency Battery Backup Inverter Packs:
+   - 90-minute minimum runtime, self-testing, 120V input, wet-location listed.
+
+3. 4 EA: Stairway 3-Way Lighting Control Switch Assemblies (S3A):
+   - 20A 120V heavy-duty specification grade 3-way toggle switches with NEMA 4X cast aluminum wet-location spring covers.
+
+4. 8 EA: Eaton/Cutler-Hammer Quicklag BAB 20A 1-Pole Bolt-On Circuit Breakers:
+   - 120/208V, 10kAIC rating, 1-inch pole, bolt-on bus tab for existing Panelboard LP6.</div>
+          </div>
+        </div>
+
+        <!-- RFQ 4: Industrial Networking & Fiber Optic Package -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">Package E-RFQ-04: Industrial Networking & Fiber Optic Patching Package</span>
+              <span class="accordion-meta">Target Vendors: Anixter, Graybar, Panduit | Specification Section 40 66 11, 40 66 33</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfq4-text', event)">Copy RFQ Text</button>
+          </div>
+          <div class="accordion-body">
+            <p><strong>Scope Overview:</strong> Industrial DIN-rail fiber optic patch panels, LC connectors, OTDR testing, and Category 6 STP cabling connecting 4 Filter Control Panels to Main Plant SCADA.</p>
+            <div class="pre-block" id="rfq4-text">REQUEST FOR QUOTATION (RFQ) - INDUSTRIAL FIBER & NETWORKING HARDWARE
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab (CWF 26-565)
+SPECIFICATION: Section 40 66 11 (Industrial Ethernet Switches) & 40 66 33 (Local Area Network)
+
+ITEMS REQUIRED:
+1. 4 EA: DIN-Rail Mounted Fiber Optic Patch Panels (NEMA 4X Enclosure):
+   - 6-port duplex LC multi-mode adapters, internal splice tray, and cable gland strain relief.
+
+2. 48 EA: LC Multi-Mode Duplex Connectors (Epoxy/Polish or mechanical splice).
+3. 16 EA: 1-Meter LC-to-LC Duplex OM3 50/125um Fiber Patch Cables.
+4. 4 EA: Panduit IndustrialNet NEMA 4X Industrial RJ45 Wall Jacks & Field Terminators.
+5. 1 LS: OTDR Bi-Directional Attenuation Certification & Power Meter Test Report per Spec 40 66 33.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 5: OPTION 4 - PRE-BID ENGINEERING RFIS -->
+    <!-- ======================================================== -->
+    <section id="tab-rfi" class="tab-panel">
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Pre-Bid Engineering Requests for Information (RFIs)</h2>
+            <p class="card-subtitle">Formal clarifications regarding Panel LP6, master raceways, pedestal slab mounting, and instrument demarcation</p>
+          </div>
+        </div>
+
+        <!-- RFI 1 -->
+        <div class="accordion-card">
+          <div class="accordion-header active" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">RFI-E01: Panel LP6 Physical Space, AIC Fault Rating, and Breaker Type Compatibility</span>
+              <span class="accordion-meta">Drawing Reference: E-01-102 (Addendum No. 1) | Specification Reference: 26 05 11</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfi1-text', event)">Copy RFI Text</button>
+          </div>
+          <div class="accordion-body active">
+            <div class="pre-block" id="rfi1-text">PRE-BID REQUEST FOR INFORMATION (RFI-E01)
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab Improvements
+DRAWING REF: Sheet E-01-102 (Addendum No. 1) | SPEC REF: Section 26 05 11
+
+BACKGROUND:
+Addendum No. 1 revised Sheet E-01-102 to show re-circuiting of the pipe gallery lighting and filter control panel auxiliary power feeds into existing Lighting Panel LP6 located in the Filter Building Electrical Room. The drawings indicate adding eight (8) new 20A 1-Pole branch circuit breakers into LP6.
+
+CLARIFICATION REQUESTED:
+1. Please confirm the manufacturer, catalog number, bus ampacity, and available physical spare breaker spaces in existing Panel LP6.
+2. Please confirm whether existing Panel LP6 requires bolt-on breakers (e.g., Eaton/Cutler-Hammer BAB) or plug-in breakers (e.g., Eaton BR).
+3. Please provide the available short-circuit fault current (AIC rating) at Panel LP6 so the electrical contractor can verify breaker interrupting capacity ratings.
+
+SUGGESTED CONTRACTOR RESOLUTION:
+Contractor assumes Panel LP6 is an Eaton 120/208V 3-phase 4-wire NQOD/BAB style panelboard with 10 kAIC rating and 8 verified spare physical slots. If existing panel is full, please clarify if a new 120/208V lighting subpanel is to be furnished.</div>
+          </div>
+        </div>
+
+        <!-- RFI 2 -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">RFI-E02: Master Conduit Trunk Wall Penetrations and Hydrostatic Sealing in Gallery</span>
+              <span class="accordion-meta">Drawing Reference: E-01-102, E-01-602 | Specification Reference: 26 05 11, 26 05 83</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfi2-text', event)">Copy RFI Text</button>
+          </div>
+          <div class="accordion-body">
+            <div class="pre-block" id="rfi2-text">PRE-BID REQUEST FOR INFORMATION (RFI-E02)
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab Improvements
+DRAWING REF: Sheets E-01-102, E-01-602 | SPEC REF: Section 26 05 11
+
+BACKGROUND:
+The electrical design routes two master conduit trunks along the pipe gallery: one 2-1/2" GRC trunk (containing 70#14, #12G) and one 2" GRC trunk (containing 14-1PR#16 shielded pairs). These conduits must transition from the Pipe Gallery into the dry Filter Electrical Room and Control Room across concrete structural division walls.
+
+CLARIFICATION REQUESTED:
+1. Are existing wall sleeves available for the 2-1/2" and 2" master trunks, or must the Electrical Contractor core drill new penetrations through the reinforced concrete walls?
+2. Are hydrostatic modular mechanical seals (e.g., Link-Seal Type C with EPDM elastomer) required at all wall penetrations between wet and dry process areas?
+
+SUGGESTED CONTRACTOR RESOLUTION:
+Contractor includes core drilling six (6) 4-inch penetrations through existing 12-inch reinforced concrete walls and installing Link-Seal modular mechanical seals rated for 20 psig hydrostatic head.</div>
+          </div>
+        </div>
+
+        <!-- RFI 3 -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">RFI-E03: Hand Station Floor Pedestal Mounting & Concrete Rebar Scanning Limits</span>
+              <span class="accordion-meta">Drawing Reference: E-01-701 Detail A | Specification Reference: 26 05 83</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfi3-text', event)">Copy RFI Text</button>
+          </div>
+          <div class="accordion-body">
+            <div class="pre-block" id="rfi3-text">PRE-BID REQUEST FOR INFORMATION (RFI-E03)
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab Improvements
+DRAWING REF: Sheet E-01-701 Detail A | SPEC REF: Section 26 05 83
+
+BACKGROUND:
+Detail A on Sheet E-01-701 requires thirty-three (33) Type 316 stainless steel floor pedestal stands to be anchored to the reinforced concrete pipe gallery operating floor slab using four (4) 1/2" SS wedge anchors per pedestal.
+
+CLARIFICATION REQUESTED:
+1. Please confirm if Non-Destructive Testing (NDT) / Ground Penetrating Radar (GPR) concrete scanning is required prior to drilling into the gallery floor slab to avoid striking post-tensioned cables or structural rebar.
+2. In the event of rebar interference, is a minimum anchor embedment depth of 3-1/2 inches acceptable, or is structural engineering review required for relocated baseplates?
+
+SUGGESTED CONTRACTOR RESOLUTION:
+Contractor includes GPR concrete scanning for all 33 pedestal locations. Baseplates will be adjusted up to 2 inches laterally to clear rebar while maintaining 3-1/2 inch embedment.</div>
+          </div>
+        </div>
+
+        <!-- RFI 4 -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">RFI-E04: Filter Effluent Venturi DP Transmitters vs. Magmeters Demarcation</span>
+              <span class="accordion-meta">Drawing Reference: E-01-102 vs. Mechanical MD-01-101..104 | Specification Reference: 40 71 00, 40 72 00</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfi4-text', event)">Copy RFI Text</button>
+          </div>
+          <div class="accordion-body">
+            <div class="pre-block" id="rfi4-text">PRE-BID REQUEST FOR INFORMATION (RFI-E04)
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab Improvements
+DRAWING REF: Sheet E-01-102, I-01-701 | SPEC REF: Section 40 71 00, 40 72 00
+
+BACKGROUND:
+Drawing E-01-102 Keynotes and I-01-701 detail eight (8) 14-inch flanged electromagnetic flow meters (FIT-010..040) installed in the effluent piping of Filters 1 through 8. However, mechanical demolition drawings reference existing venturi tube differential pressure transmitters.
+
+CLARIFICATION REQUESTED:
+1. Please confirm that all filter effluent flow measurement is performed exclusively by the new 14" Rosemount 8750W electromagnetic flow meters, and that existing differential pressure transmitters on venturi tubes are to be fully demolished and removed under Electrical Demolition.
+2. Please confirm whether Prime Controls or the Mechanical Contractor furnishes the matching grounding rings for the 14" magmeters.
+
+SUGGESTED CONTRACTOR RESOLUTION:
+Contractor confirms existing venturi DP transmitters and impulsing tubing are demolished. Prime Controls supplies 14" magmeters complete with Type 316 SS grounding rings; Electrical Contractor bonds grounding rings to plant ground loop per Sheet E-01-102 Keynote 3.</div>
+          </div>
+        </div>
+
+        <!-- RFI 5 -->
+        <div class="accordion-card">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="accordion-title-block">
+              <span class="accordion-title">RFI-E05: 120VAC Solenoid Inrush and Filter Control Panel Power Feed Sizing</span>
+              <span class="accordion-meta">Drawing Reference: E-01-602, E-01-603 | Specification Reference: 40 05 57, 40 67 11</span>
+            </div>
+            <button class="btn btn-secondary" onclick="copyText('rfi5-text', event)">Copy RFI Text</button>
+          </div>
+          <div class="accordion-body">
+            <div class="pre-block" id="rfi5-text">PRE-BID REQUEST FOR INFORMATION (RFI-E05)
+PROJECT: City of Wichita Falls - Plant 61 Filter Rehab Improvements
+DRAWING REF: Sheets E-01-602, E-01-603 | SPEC REF: Section 40 05 57, 40 67 11
+
+BACKGROUND:
+Each Filter Control Panel (FCP-1 through FCP-4) controls two filter cells and drives up to ten (10) 120VAC pneumatic valve actuator solenoid coils simultaneously during filter backwash switchover (influent, effluent, washwater, drain, surface wash).
+
+CLARIFICATION REQUESTED:
+1. Please confirm the maximum allowable inrush VA rating for pneumatic valve solenoids powered directly from FCP interposing relay terminals.
+2. Does the internal 1kVA SolaHD UPS power both the PLC rack and the 120VAC field solenoid coils, or are solenoids fed from an isolated utility 120VAC circuit to prevent inrush-induced UPS inverter trip?
+
+SUGGESTED CONTRACTOR RESOLUTION:
+Contractor sizes field solenoid branch circuits for 35VA holding / 120VA inrush per coil, fed via dedicated isolated utility 120VAC circuit breakers in FCPs, keeping PLC and OIT on isolated conditioned UPS power.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TAB 6: DRAWING & SPECIFICATION MATRIX -->
+    <!-- ======================================================== -->
+    <section id="tab-matrix" class="tab-panel">
+      
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Electrical & I&C Drawing & Specification Cross-Reference Matrix</h2>
+            <p class="card-subtitle">Comprehensive mapping of all contract drawings and technical specifications governing Division 26 & 40</p>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-scroll-hint">← Swipe or scroll horizontally to view all reference columns →</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Drawing / Spec #</th>
+                <th>Title / Description</th>
+                <th>Governing Scope & Takeoff Content</th>
+                <th>Keynotes / Addendum Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>E-00-001</strong></td>
+                <td>Electrical Symbols, Abbreviations & General Notes</td>
+                <td>NEMA ratings, conduit raceway standards, wiring color codes, 316 SS hardware mandates</td>
+                <td>Standard Legend</td>
+              </tr>
+              <tr>
+                <td><strong>ED-01-101</strong></td>
+                <td>Filter Building Electrical Demolition Plan</td>
+                <td>Demolition of 4 console filter desks, 8 MES analyzers, 33 actuator JBs, 32 gallery light fixtures</td>
+                <td>Demolition Keynotes 1-6</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-101</strong></td>
+                <td>Filter Building Operating Floor Electrical Plan</td>
+                <td>Filter Control Panels FCP-1..4 locations, operating floor hand stations, receptacle circuits</td>
+                <td>Operating Floor Layout</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-102</strong></td>
+                <td>Pipe Gallery Electrical & Lighting Plan</td>
+                <td>32 LED fixtures, 2-1/2" & 2" master trunks, magmeter ground loop, Panel LP6 tie-in</td>
+                <td><strong>Revised in Addendum No. 1</strong> (LP6 re-circuiting)</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-601</strong></td>
+                <td>Filter Building Conduit Schedule & Feeder Details</td>
+                <td>Master conduit routing schedules, conductor fill tables, raceway size schedules</td>
+                <td>Feeder Schedule</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-602</strong></td>
+                <td>Filter Control Schematic Diagram (Part 1)</td>
+                <td>Filters 1-4 actuator interlocks, 120VAC solenoids, limit switch wiring, FCP terminations</td>
+                <td>Schematic Part 1</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-603</strong></td>
+                <td>Filter Control Schematic Diagram (Part 2)</td>
+                <td>Filters 5-8 actuator interlocks, washwater valve VBF-001, local-off-remote switches</td>
+                <td>Schematic Part 2</td>
+              </tr>
+              <tr>
+                <td><strong>E-01-701</strong></td>
+                <td>Electrical Installation Details</td>
+                <td><strong>Detail A:</strong> 316 SS Hand Station Floor Pedestal; Unistrut rack mounting; Myers hubs</td>
+                <td>Mandatory Pedestal Detail</td>
+              </tr>
+              <tr>
+                <td><strong>I-00-001..004</strong></td>
+                <td>I&C General Notes, Loop Symbols & FCP Layouts</td>
+                <td>Filter Control Panel dual-cell interior elevations, PLC rack layouts, 15" OIT cutout details</td>
+                <td>Prime Controls Standard</td>
+              </tr>
+              <tr>
+                <td><strong>I-01-701..702</strong></td>
+                <td>SCADA Network Architecture & Fiber Optic Topology</td>
+                <td>6-strand OM3 fiber, Cat6 STP, N-Tron managed switches, SCADA patch panels</td>
+                <td>Network Topology</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 26 05 11</strong></td>
+                <td>Common Work Results for Electrical</td>
+                <td>GRC conduit, Myers hubs, Form 8 fittings, THHN conductors, Panel LP6 bolt-on breakers</td>
+                <td>Division 26 Base</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 26 05 83</strong></td>
+                <td>Hangers and Supports for Electrical Systems</td>
+                <td>Type 316 stainless steel Unistrut, cantilever brackets, clamps, and wedge anchors</td>
+                <td>Mandatory 316 SS</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 40 61 11</strong></td>
+                <td>Common Work Results for Process Control & I&C</td>
+                <td>Sole-source Prime Controls mandate, FAT/SAT testing, 2-year warranty, training</td>
+                <td><strong>Addendum 1 Q&A #12</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Spec 40 64 00</strong></td>
+                <td>Programmable Logic Controllers & Touchscreen OITs</td>
+                <td>Allen-Bradley ControlLogix 1756-L81E, PanelView Plus 7 15" Touchscreen OITs</td>
+                <td>PLC Hardware Specs</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 40 71 00</strong></td>
+                <td>Flow Measurement Devices (Electromagnetic)</td>
+                <td>Rosemount 8750W 14" effluent and 24" washwater magmeters, 316 SS grounding rings</td>
+                <td>Magmeter Spec</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 40 72 00</strong></td>
+                <td>Level & Pressure Measurement Devices</td>
+                <td>Rosemount 3051S loss-of-head DP transmitters, Siemens ultrasonic level transmitters</td>
+                <td>Level & DP Spec</td>
+              </tr>
+              <tr>
+                <td><strong>Spec 40 79 11</strong></td>
+                <td>Turbidimeters (Online Laser Process Analyzers)</td>
+                <td>Hach TU5300sc laser turbidimeters with SC200 controllers (0-1000 NTU)</td>
+                <td>Water Quality Spec</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    // Client-side Data Stores
+    const bomData = [{"cat": "Conduit & Raceway", "item": "E-C01", "desc": "2-1/2\" GRC / PVC-Coated Rigid Steel Conduit (FCP Master Power & Discrete Control Trunk)", "ref": "E-01-102, E-01-602/603, Spec 26 05 11", "size": "2-1/2\" GRC", "unit": "LF", "qty": 1280, "mat_unit": 24.5, "lab_unit": 0.42, "ext_mat": 31360.0, "ext_lab": 537.6}, {"cat": "Conduit & Raceway", "item": "E-C02", "desc": "2\" GRC / PVC-Coated Rigid Steel Conduit (FCP Master Analog Signal Trunk)", "ref": "E-01-102, E-01-602/603, Spec 26 05 11", "size": "2\" GRC", "unit": "LF", "qty": 1120, "mat_unit": 18.75, "lab_unit": 0.38, "ext_mat": 21000.0, "ext_lab": 425.6}, {"cat": "Conduit & Raceway", "item": "E-C03", "desc": "1\" GRC Conduit (Field J-Box to Actuator Power & Command Feeds)", "ref": "E-01-602, E-01-603, Spec 26 05 11", "size": "1\" GRC", "unit": "LF", "qty": 1440, "mat_unit": 7.8, "lab_unit": 0.28, "ext_mat": 11232.0, "ext_lab": 403.2}, {"cat": "Conduit & Raceway", "item": "E-C04", "desc": "3/4\" GRC Conduit (Local Hand Stations, Solenoids, Limit Switches, Instruments)", "ref": "E-01-602, E-01-603, E-01-701, Spec 26 05 11", "size": "3/4\" GRC", "unit": "LF", "qty": 3850, "mat_unit": 5.2, "lab_unit": 0.24, "ext_mat": 20020.0, "ext_lab": 924.0}, {"cat": "Conduit & Raceway", "item": "E-C05", "desc": "3/4\" Liquidtight Flexible Metallic Conduit (LFMC, Final Actuator & Transmitter Drops)", "ref": "E-01-701, Spec 26 05 11", "size": "3/4\" LFMC", "unit": "LF", "qty": 620, "mat_unit": 4.1, "lab_unit": 0.18, "ext_mat": 2542.0, "ext_lab": 111.6}, {"cat": "Conduit & Raceway", "item": "E-C06", "desc": "3/4\" GRC Conduit (Fiber Optic & Cat6 Industrial Ethernet to Main Plant PLC)", "ref": "I-01-701, Spec 40 66 11 / 33", "size": "3/4\" GRC", "unit": "LF", "qty": 880, "mat_unit": 5.2, "lab_unit": 0.24, "ext_mat": 4576.0, "ext_lab": 211.2}, {"cat": "Conduit & Raceway", "item": "E-C07", "desc": "3/4\" GRC Branch Conduit (Pipe Gallery LED Lighting Circuits from Panel LP6)", "ref": "E-01-102 Addendum 1, Spec 26 05 11", "size": "3/4\" GRC", "unit": "LF", "qty": 1450, "mat_unit": 5.2, "lab_unit": 0.24, "ext_mat": 7540.0, "ext_lab": 348.0}, {"cat": "Conductors & Cables", "item": "E-W01", "desc": "#14 AWG THHN/THWN-2 Stranded Copper (120VAC Control, Solenoids, Limit Switches)", "ref": "E-01-602, E-01-603, Spec 26 05 11", "size": "#14 AWG Cu", "unit": "LF", "qty": 96400, "mat_unit": 0.18, "lab_unit": 0.004, "ext_mat": 17352.0, "ext_lab": 385.6}, {"cat": "Conductors & Cables", "item": "E-W02", "desc": "#12 AWG THHN/THWN-2 Stranded Copper Equipment Grounding Conductor", "ref": "E-01-102, E-01-602/603, Spec 26 05 11", "size": "#12 AWG Cu", "unit": "LF", "qty": 14800, "mat_unit": 0.26, "lab_unit": 0.004, "ext_mat": 3848.0, "ext_lab": 59.2}, {"cat": "Conductors & Cables", "item": "E-W03", "desc": "#16 AWG 1-Pair Shielded Twisted Pair (1-1PR#16S, Analog 4-20mA Transmitters & Positioners)", "ref": "E-01-601, I-01-701, Spec 40 66 33", "size": "#16 AWG 1PR Shld", "unit": "LF", "qty": 21500, "mat_unit": 0.58, "lab_unit": 0.006, "ext_mat": 12470.0, "ext_lab": 129.0}, {"cat": "Conductors & Cables", "item": "E-W04", "desc": "#6 AWG Bare Stranded Copper (Magmeter Flow Tube Grounding Loop to Plant Ring)", "ref": "E-01-102 Keynote 3, Spec 26 05 11", "size": "#6 AWG Bare Cu", "unit": "LF", "qty": 640, "mat_unit": 1.45, "lab_unit": 0.025, "ext_mat": 928.0, "ext_lab": 16.0}, {"cat": "Conductors & Cables", "item": "E-W05", "desc": "6-Strand 50/125um OM3 Multi-Mode Fiber Optic Cable (FCPs to SCADA Patch Panel)", "ref": "I-01-701, Spec 40 66 33", "size": "6-Strand MM Fiber", "unit": "LF", "qty": 1600, "mat_unit": 1.85, "lab_unit": 0.018, "ext_mat": 2960.0, "ext_lab": 28.8}, {"cat": "Conductors & Cables", "item": "E-W06", "desc": "Category 6 Industrial Shielded Twisted Pair (Cat6 STP, Industrial Ethernet)", "ref": "I-01-701, Spec 40 66 33", "size": "Cat6 STP", "unit": "LF", "qty": 1200, "mat_unit": 0.95, "lab_unit": 0.012, "ext_mat": 1140.0, "ext_lab": 14.4}, {"cat": "Conductors & Cables", "item": "E-W07", "desc": "#12 AWG THHN/THWN-2 Lighting Branch Feeder Conductors (Panel LP6 to Fixtures)", "ref": "E-01-102, E-01-601, Spec 26 05 11", "size": "#12 AWG Cu", "unit": "LF", "qty": 4200, "mat_unit": 0.26, "lab_unit": 0.005, "ext_mat": 1092.0, "ext_lab": 21.0}, {"cat": "Fittings & Hardware", "item": "E-F01", "desc": "316 Stainless Steel Unistrut Channel & Conduit Clamps (Pipe Gallery Racks)", "ref": "E-01-102, E-01-701, Spec 26 05 83", "size": "1-5/8\" 316 SS", "unit": "LF", "qty": 1850, "mat_unit": 18.5, "lab_unit": 0.35, "ext_mat": 34225.0, "ext_lab": 647.5}, {"cat": "Fittings & Hardware", "item": "E-F02", "desc": "316 Stainless Steel Cantilever Brackets & Wall Stanchion Assemblies", "ref": "E-01-701, Spec 26 05 83", "size": "316 SS Bracket", "unit": "EA", "qty": 420, "mat_unit": 48.0, "lab_unit": 0.65, "ext_mat": 20160.0, "ext_lab": 273.0}, {"cat": "Fittings & Hardware", "item": "E-F03", "desc": "Myers Watertight Grounding Hubs (3/4\", 1\", 2\", 2-1/2\")", "ref": "Spec 26 05 11, NEMA 4X", "size": "3/4\" - 2-1/2\" Hubs", "unit": "EA", "qty": 320, "mat_unit": 14.5, "lab_unit": 0.2, "ext_mat": 4640.0, "ext_lab": 64.0}, {"cat": "Fittings & Hardware", "item": "E-F04", "desc": "Form 8 Cast Iron / PVC-Coated Conduit Bodies (LB, T, LL, LR)", "ref": "Spec 26 05 11", "size": "3/4\" - 2-1/2\" Form 8", "unit": "EA", "qty": 210, "mat_unit": 36.0, "lab_unit": 0.45, "ext_mat": 7560.0, "ext_lab": 94.5}, {"cat": "Fittings & Hardware", "item": "E-F05", "desc": "Conduit Expansion & Deflection Couplings (Structural Expansion Joints)", "ref": "E-01-102, Spec 26 05 11", "size": "3/4\" - 2-1/2\"", "unit": "EA", "qty": 24, "mat_unit": 185.0, "lab_unit": 1.2, "ext_mat": 4440.0, "ext_lab": 28.8}, {"cat": "Fittings & Hardware", "item": "E-F06", "desc": "316 Stainless Steel Pedestal Floor Stands for Local Hand Stations (E-01-701 Detail A)", "ref": "E-01-701 Detail A, Spec 26 05 83", "size": "3\" 316 SS Pedestal", "unit": "EA", "qty": 33, "mat_unit": 385.0, "lab_unit": 3.8, "ext_mat": 12705.0, "ext_lab": 125.4}, {"cat": "Fittings & Hardware", "item": "E-F07", "desc": "NEMA 4X 316 Stainless Steel Field Instrument Junction Boxes (J1-J4 + Field JBs)", "ref": "E-01-602, E-01-603, Spec 40 67 11", "size": "16x14x8\" 316 SS", "unit": "EA", "qty": 16, "mat_unit": 480.0, "lab_unit": 4.5, "ext_mat": 7680.0, "ext_lab": 72.0}, {"cat": "Fittings & Hardware", "item": "E-F08", "desc": "NEMA 4X Heavy-Duty Pushbutton Control Stations (Open-Close / Local-Off-Remote)", "ref": "E-01-602, E-01-603, Spec 40 05 57", "size": "316 SS / NEMA 4X", "unit": "EA", "qty": 33, "mat_unit": 260.0, "lab_unit": 2.5, "ext_mat": 8580.0, "ext_lab": 82.5}, {"cat": "Power & Lighting", "item": "E-P01", "desc": "Panelboard LP6 20A 1-Pole Bolt-On Circuit Breakers (Eaton/Cutler-Hammer BAB)", "ref": "E-01-102 Addendum 1, Spec 26 05 11", "size": "20A 1P 120/208V", "unit": "EA", "qty": 8, "mat_unit": 95.0, "lab_unit": 1.5, "ext_mat": 760.0, "ext_lab": 12.0}, {"cat": "Power & Lighting", "item": "E-P02", "desc": "IP66 Wet-Location Industrial Linear LED Vapor-Tight Fixtures (Type 1)", "ref": "E-01-102, E-01-601, Spec 26 05 11", "size": "4-Foot LED 45W", "unit": "EA", "qty": 32, "mat_unit": 285.0, "lab_unit": 1.8, "ext_mat": 9120.0, "ext_lab": 57.6}, {"cat": "Power & Lighting", "item": "E-P03", "desc": "Stairway Lighting 3-Way Switch Assemblies (S3A) & Wet-Location Enclosures", "ref": "E-01-102 Keynote 4, Spec 26 05 11", "size": "20A 120V 3-Way", "unit": "EA", "qty": 4, "mat_unit": 125.0, "lab_unit": 1.8, "ext_mat": 500.0, "ext_lab": 7.2}, {"cat": "Power & Lighting", "item": "E-P04", "desc": "Emergency Battery Backup Inverter Packs for Gallery LED Fixtures (90-Min)", "ref": "Spec 26 05 11", "size": "120V Inverter Pack", "unit": "EA", "qty": 8, "mat_unit": 320.0, "lab_unit": 1.5, "ext_mat": 2560.0, "ext_lab": 12.0}, {"cat": "I&C Systems Package", "item": "E-I01", "desc": "Filter Control Panels (FCP-1, FCP-2, FCP-3, FCP-4) - Prime Controls Sole-Source", "ref": "I-00-004, I-01-701, Spec 40 61 11 / 64 00", "size": "Dual-Cell NEMA 4X", "unit": "EA", "qty": 4, "mat_unit": 142000.0, "lab_unit": 45.0, "ext_mat": 568000.0, "ext_lab": 180.0}, {"cat": "I&C Systems Package", "item": "E-I02", "desc": "PanelView Plus 7 Performance 15\" Color Graphic Touchscreen OITs (Prime Controls)", "ref": "I-00-004, Spec 40 64 00", "size": "15\" Touch OIT", "unit": "EA", "qty": 4, "mat_unit": 8500.0, "lab_unit": 8.0, "ext_mat": 34000.0, "ext_lab": 32.0}, {"cat": "I&C Systems Package", "item": "E-I03", "desc": "N-Tron Industrial Managed Gigabit Ethernet Switches (Panel Mounted)", "ref": "I-01-701, Spec 40 66 11", "size": "8-Port Managed", "unit": "EA", "qty": 4, "mat_unit": 2400.0, "lab_unit": 4.0, "ext_mat": 9600.0, "ext_lab": 16.0}, {"cat": "I&C Systems Package", "item": "E-I04", "desc": "SolaHD True Online Industrial DIN-Rail UPS Units (1kVA / 30-Min Runtime)", "ref": "I-00-004, Spec 40 67 11", "size": "1kVA Industrial UPS", "unit": "EA", "qty": 4, "mat_unit": 2850.0, "lab_unit": 3.5, "ext_mat": 11400.0, "ext_lab": 14.0}, {"cat": "I&C Systems Package", "item": "E-I05", "desc": "Online Laser Turbidimeters (Hach TU5300sc with SC200 Controllers)", "ref": "E-01-102 (AIT-010..040), Spec 40 79 11", "size": "0-1000 NTU Laser", "unit": "EA", "qty": 8, "mat_unit": 7200.0, "lab_unit": 6.0, "ext_mat": 57600.0, "ext_lab": 48.0}, {"cat": "I&C Systems Package", "item": "E-I06", "desc": "Differential Pressure Transmitters (Loss of Head, Rosemount 3051S + Manifold)", "ref": "E-01-102 (PDIT-010..040), Spec 40 72 00", "size": "0-150\" H2O DP", "unit": "EA", "qty": 8, "mat_unit": 3850.0, "lab_unit": 5.0, "ext_mat": 30800.0, "ext_lab": 40.0}, {"cat": "I&C Systems Package", "item": "E-I07", "desc": "Non-Contact Ultrasonic Filter Basin Level Transmitters (Siemens HydroRanger/Echomax)", "ref": "E-01-102 (LIT-010..040), Spec 40 72 00", "size": "0-20 Ft Range", "unit": "EA", "qty": 8, "mat_unit": 3400.0, "lab_unit": 4.5, "ext_mat": 27200.0, "ext_lab": 36.0}, {"cat": "I&C Systems Package", "item": "E-I08", "desc": "14\" Electromagnetic Flow Meters (Filter Effluent Magmeter, Rosemount 8750W)", "ref": "E-01-102 (FIT-010..040), Spec 40 71 00", "size": "14\" Magmeter Flanged", "unit": "EA", "qty": 8, "mat_unit": 12500.0, "lab_unit": 12.0, "ext_mat": 100000.0, "ext_lab": 96.0}, {"cat": "I&C Systems Package", "item": "E-I09", "desc": "24\" Electromagnetic Flow Meter (Washwater Supply Magmeter, FIT-001)", "ref": "E-01-102 (FIT-001), Spec 40 71 00", "size": "24\" Magmeter Flanged", "unit": "EA", "qty": 1, "mat_unit": 21000.0, "lab_unit": 16.0, "ext_mat": 21000.0, "ext_lab": 16.0}, {"cat": "I&C Systems Package", "item": "E-I10", "desc": "I&C Software, SCADA Screen Integration, FAT/SAT, Commissioning & Training", "ref": "Spec 40 61 11 / 40 68 83", "size": "System Integration", "unit": "LS", "qty": 1, "mat_unit": 165000.0, "lab_unit": 160.0, "ext_mat": 165000.0, "ext_lab": 160.0}, {"cat": "Actuator Hookups", "item": "E-A01", "desc": "Pneumatic Actuator 120VAC Solenoid Valve Power & Control Hookups (VBF-001..047)", "ref": "E-01-602, E-01-603, Spec 40 05 57", "size": "120VAC Solenoid", "unit": "EA", "qty": 33, "mat_unit": 145.0, "lab_unit": 3.5, "ext_mat": 4785.0, "ext_lab": 115.5}, {"cat": "Actuator Hookups", "item": "E-A02", "desc": "Pneumatic Actuator End-of-Travel Limit Switch (ZSC/ZSO) Terminations", "ref": "E-01-602, E-01-603, Spec 40 05 57", "size": "Limit Switches", "unit": "EA", "qty": 33, "mat_unit": 110.0, "lab_unit": 2.5, "ext_mat": 3630.0, "ext_lab": 82.5}, {"cat": "Actuator Hookups", "item": "E-A03", "desc": "Modulating Valve Electro-Pneumatic 4-20mA Positioner Terminations (VBF-001, 014..044)", "ref": "E-01-602, E-01-603, Spec 40 05 57", "size": "4-20mA Positioner", "unit": "EA", "qty": 5, "mat_unit": 185.0, "lab_unit": 4.0, "ext_mat": 925.0, "ext_lab": 20.0}, {"cat": "Actuator Hookups", "item": "E-A04", "desc": "Manual Drain Valve End-of-Travel Limit Switch Terminations (Drain Top/Bottom)", "ref": "Spec 40 05 64.11 S01", "size": "Manual EOT Sw", "unit": "EA", "qty": 16, "mat_unit": 95.0, "lab_unit": 2.0, "ext_mat": 1520.0, "ext_lab": 32.0}, {"cat": "Electrical Demolition", "item": "E-D01", "desc": "Demolition of Legacy Filter Console Desks Internal Wiring, Relays & Indicators", "ref": "ED-01-101, MD-01-101..104", "size": "4 Dual Consoles", "unit": "LS", "qty": 1, "mat_unit": 1500.0, "lab_unit": 80.0, "ext_mat": 1500.0, "ext_lab": 80.0}, {"cat": "Electrical Demolition", "item": "E-D02", "desc": "Demolition of Existing Valve Actuator Junction Boxes, Control Wiring & Flex Feeds", "ref": "ED-01-101, E-01-601 Keynote 2", "size": "33 Actuators", "unit": "LS", "qty": 1, "mat_unit": 2800.0, "lab_unit": 120.0, "ext_mat": 2800.0, "ext_lab": 120.0}, {"cat": "Electrical Demolition", "item": "E-D03", "desc": "Demolition of 8 Media Expansion Analyzers (MES), Sensors & Branch Power Circuits", "ref": "E-01-601 Keynote 1, ED-01-101", "size": "8 MES Units", "unit": "LS", "qty": 1, "mat_unit": 1200.0, "lab_unit": 40.0, "ext_mat": 1200.0, "ext_lab": 40.0}, {"cat": "Electrical Demolition", "item": "E-D04", "desc": "Demolition of 32 Fluorescent Fixtures, Surface Conduits & Switches in Pipe Gallery", "ref": "ED-01-101, Spec 02 41 00", "size": "32 Fixtures", "unit": "LS", "qty": 1, "mat_unit": 1800.0, "lab_unit": 64.0, "ext_mat": 1800.0, "ext_lab": 64.0}, {"cat": "Electrical Demolition", "item": "E-D05", "desc": "Removal and Safing of Abandoned Control Cabling, Air Raceways & Pull Boxes", "ref": "ED-01-101, MD-01-802 Addendum 1", "size": "Gallery Raceways", "unit": "LS", "qty": 1, "mat_unit": 2200.0, "lab_unit": 90.0, "ext_mat": 2200.0, "ext_lab": 90.0}];
+    const bidData = [{"code": "E-BID-01", "pay_item": "Pay Item 8", "desc": "Removal and replacement of light fixtures (Division 26 Complete)", "qty": 1, "unit": "LS", "labor": 52000.0, "mat": 28000.0, "sub": 0.0, "equip": 10000.0, "total": 90000.0, "self": "Yes", "notes": "Demo 32 existing fluorescent fixtures; furnish and install 32 IP66 wet-location industrial linear LED fixtures; branch circuit wiring and circuiting from Panel LP6 per Addendum 1 Sheet E-01-102."}, {"code": "E-BID-02", "pay_item": "Pay Item 4 (Field)", "desc": "Filter Controls & Instrumentation Electrical Installation & Raceways", "qty": 1, "unit": "LS", "labor": 240000.0, "mat": 120000.0, "sub": 0.0, "equip": 35000.0, "total": 395000.0, "self": "Yes", "notes": "Electrical Contractor installation of 4x Filter Control Panels (FCP-1..4), master conduit trunks (2-1/2\" discrete, 2\" analog), 1\" actuator feeds, 3/4\" branches, 136k LF wire pulls, terminations, and testing."}, {"code": "E-BID-03", "pay_item": "Pay Item 4 (Sub)", "desc": "Sole-Source Prime Controls I&C Package (Hardware, Software, Commissioning)", "qty": 1, "unit": "LS", "labor": 0.0, "mat": 0.0, "sub": 1150000.0, "equip": 0.0, "total": 1150000.0, "self": "No", "notes": "Mandatory Sole-Source Supplier per Spec 40 61 11 & Addendum 1 Q&A #12: ControlLogix PLCs, PanelView 15\" OITs, N-Tron switches, instruments (AIT, LIT, PDIT, FIT), Wonderware SCADA, FAT/SAT, and 2-yr warranty."}, {"code": "E-BID-04", "pay_item": "Pay Item 5 (Elec)", "desc": "Pneumatic Valve Actuator & Limit Switch Electrical Hookups & Pedestals", "qty": 1, "unit": "LS", "labor": 88000.0, "mat": 38000.0, "sub": 0.0, "equip": 14000.0, "total": 140000.0, "self": "Yes", "notes": "Field electrical wiring, terminations, and 316 SS pedestal floor stand mounting for 33 pneumatic valve actuators (120VAC solenoids, limit switches, positioners) and 16 manual drain valve limit switches per Sheet E-01-701 Detail A."}, {"code": "E-BID-05", "pay_item": "Pay Item 200.1 (Elec)", "desc": "Electrical Mobilization, Scaffolding, Core Drilling & Safety Compliance", "qty": 1, "unit": "LS", "labor": 32000.0, "mat": 12000.0, "sub": 0.0, "equip": 21000.0, "total": 65000.0, "self": "Yes", "notes": "Mobilization of pipe gallery scissor lifts, conduit benders, wire tuggers, concrete x-ray / GPR scanning for floor pedestal anchors, PPE, and electrical testing equipment."}, {"code": "E-BID-06", "pay_item": "Demolition (Elec)", "desc": "Demolition of Legacy Filter Desks, MES Analyzers, Actuator J-Boxes & Wiring", "qty": 1, "unit": "LS", "labor": 48000.0, "mat": 4000.0, "sub": 0.0, "equip": 8000.0, "total": 60000.0, "self": "Yes", "notes": "Electrical disconnection, safing, pulling back conductors, and removal of 4 dual-console filter desks, 8 media expansion analyzers, 33 actuator J-boxes, and obsolete gallery raceways per Sheet ED-01-101."}, {"code": "E-BID-07", "pay_item": "Grounding (Elec)", "desc": "Plant Grounding Ring Bonding Loop for Magnetic Flow Meters", "qty": 1, "unit": "LS", "labor": 14000.0, "mat": 6000.0, "sub": 0.0, "equip": 4000.0, "total": 24000.0, "self": "Yes", "notes": "Exothermic welds, compression lugs, and routing #6 AWG bare copper from 8 effluent magmeters (FIT-010..040) and washwater magmeter (FIT-001) to existing Plant Grounding Electrode System per Sheet E-01-102 Keynote 3."}, {"code": "E-BID-08", "pay_item": "Panel LP6 Prep", "desc": "Lighting Panel LP6 Breaker Installation, Phasing & AIC Fault Verification", "qty": 1, "unit": "LS", "labor": 9500.0, "mat": 2500.0, "sub": 0.0, "equip": 2000.0, "total": 14000.0, "self": "Yes", "notes": "Furnish and install eight (8) 20A 1P bolt-on breakers in existing Panel LP6, phase load balancing, arc flash label verification, and circuit directory updating per Addendum 1 Sheet E-01-102."}];
+
+    let currentBOMFilter = 'All';
+
+    // Tab Switching Function
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+      
+      const targetPanel = document.getElementById(tabId);
+      if (targetPanel) targetPanel.classList.add('active');
+
+      const matchingBtn = Array.from(document.querySelectorAll('.nav-tab')).find(btn => btn.getAttribute('onclick').includes(tabId));
+      if (matchingBtn) matchingBtn.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Render BOM Table
+    function renderBOMTable(items) {
+      const tbody = document.getElementById('bom-table-body');
+      tbody.innerHTML = '';
+
+      let totalQty = 0;
+      let totalMat = 0;
+      let totalLab = 0;
+
+      items.forEach(item => {
+        totalQty += item.qty;
+        totalMat += item.ext_mat;
+        totalLab += item.ext_lab;
+
+        let tagClass = 'tag-conduit';
+        if (item.cat === 'Conductors & Cables') tagClass = 'tag-wire';
+        else if (item.cat === 'Fittings & Hardware') tagClass = 'tag-fittings';
+        else if (item.cat === 'Power & Lighting') tagClass = 'tag-power';
+        else if (item.cat === 'I&C Systems Package') tagClass = 'tag-ic';
+        else if (item.cat === 'Actuator Hookups') tagClass = 'tag-actuator';
+        else if (item.cat === 'Electrical Demolition') tagClass = 'tag-demo';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><span class="tag ${tagClass}">${item.cat}</span></td>
+          <td class="mono"><strong>${item.item}</strong></td>
+          <td>${item.desc}</td>
+          <td><span style="font-size:0.75rem; color:#475569;">${item.ref}</span></td>
+          <td class="mono">${item.size}</td>
+          <td>${item.unit}</td>
+          <td class="num mono"><strong>${item.qty.toLocaleString()}</strong></td>
+          <td class="num mono">$${item.mat_unit.toFixed(2)}</td>
+          <td class="num mono">${item.lab_unit.toFixed(3)}</td>
+          <td class="num mono">$${item.ext_mat.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+          <td class="num mono">${item.ext_lab.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('bom-total-qty').innerText = totalQty.toLocaleString();
+      document.getElementById('bom-total-mat').innerText = '$' + totalMat.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      document.getElementById('bom-total-lab').innerText = totalLab.toLocaleString(undefined, {minimumFractionDigits: 1, maximumFractionDigits: 1}) + ' hrs';
+    }
+
+    // Filter BOM Function
+    function filterBOM() {
+      const query = document.getElementById('bom-search').value.toLowerCase();
+      const filtered = bomData.filter(item => {
+        const matchesCategory = (currentBOMFilter === 'All' || item.cat === currentBOMFilter);
+        const matchesQuery = item.item.toLowerCase().includes(query) ||
+                             item.desc.toLowerCase().includes(query) ||
+                             item.ref.toLowerCase().includes(query) ||
+                             item.size.toLowerCase().includes(query);
+        return matchesCategory && matchesQuery;
+      });
+      renderBOMTable(filtered);
+    }
+
+    function setBOMFilter(category) {
+      currentBOMFilter = category;
+      document.querySelectorAll('#bom-filters .filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText === category || (category === 'All' && btn.innerText === 'All Categories'));
+      });
+      filterBOM();
+    }
+
+    // Render Bid Table
+    function renderBidTable() {
+      const tbody = document.getElementById('bid-table-body');
+      tbody.innerHTML = '';
+
+      bidData.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="mono"><strong>${item.code}</strong></td>
+          <td><span class="badge badge-accent">${item.pay_item}</span></td>
+          <td><strong>${item.desc}</strong></td>
+          <td>${item.unit}</td>
+          <td class="num mono">$${item.labor.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+          <td class="num mono">$${item.mat.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+          <td class="num mono">$${item.sub.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+          <td class="num mono">$${item.equip.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+          <td class="num mono" style="font-weight:700; color:#1e40af;">$${item.total.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+          <td><span class="tag ${item.self === 'Yes' ? 'tag-power' : 'tag-ic'}">${item.self === 'Yes' ? 'Self-Perform' : 'Subcontract'}</span></td>
+          <td style="font-size:0.78rem; color:#475569;">${item.notes}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Recalculate Bid Margins
+    function recalcBid() {
+      const baseBid = 1938000.0;
+      const overhead = parseFloat(document.getElementById('range-overhead').value);
+      const profit = parseFloat(document.getElementById('range-profit').value);
+      const contingency = parseFloat(document.getElementById('range-contingency').value);
+
+      document.getElementById('val-overhead').innerText = overhead + '%';
+      document.getElementById('val-profit').innerText = profit + '%';
+      document.getElementById('val-contingency').innerText = contingency + '%';
+
+      const totalMarkupPercent = (overhead + profit + contingency) / 100;
+      const adjustedTotal = baseBid * (1 + totalMarkupPercent);
+
+      document.getElementById('calc-adjusted-bid').innerText = '$' + adjustedTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(header) {
+      const card = header.parentElement;
+      const body = card.querySelector('.accordion-body');
+      const isActive = header.classList.contains('active');
+
+      if (isActive) {
+        header.classList.remove('active');
+        body.classList.remove('active');
+      } else {
+        header.classList.add('active');
+        body.classList.add('active');
+      }
+    }
+
+    // Copy to Clipboard
+    function copyText(elementId, event) {
+      event.stopPropagation();
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard successfully!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
+    // CSV Download Helpers
+    function downloadBOMCSV() {
+      let csv = "Category,Item No,Description,Drawing/Spec Reference,Size/Rating,Unit,Quantity,Material Unit Cost ($),Labor Unit (Hrs),Extended Material ($),Extended Labor (Hrs)\n";
+      bomData.forEach(row => {
+        csv += `"${row.cat}","${row.item}","${row.desc}","${row.ref}","${row.size}","${row.unit}",${row.qty},${row.mat_unit},${row.lab_unit},${row.ext_mat},${row.ext_lab}\n`;
+      });
+      downloadFile(csv, "Wichita_Falls_Plant_61_Electrical_BOM_Takeoff.csv", "text/csv;charset=utf-8;");
+    }
+
+    function downloadBidCSV() {
+      let csv = "Scope Code,Pay Item Ref,Description,Estimated Quantity,Unit,Direct Labor ($),Materials ($),Subcontractor ($),Equipment/Misc ($),Total Amount Bid ($),Electrical Self-Perform (Yes/No),Technical Scope Notes\n";
+      bidData.forEach(row => {
+        csv += `"${row.code}","${row.pay_item}","${row.desc}",${row.qty},"${row.unit}",${row.labor},${row.mat},${row.sub},${row.equip},${row.total},"${row.self}","${row.notes}"\n`;
+      });
+      downloadFile(csv, "Wichita_Falls_Plant_61_Electrical_Bid_Breakdown.csv", "text/csv;charset=utf-8;");
+    }
+
+    function downloadFile(content, fileName, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute("download", fileName);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      renderBOMTable(bomData);
+      renderBidTable();
+      recalcBid();
+    });
+  </script>
+</body>
+</html>
