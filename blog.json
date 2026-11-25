@@ -1,5 +1,15 @@
 [
   {
+    "id": 547,
+    "date": "Nov 25, 2026",
+    "category": "Industrial Tech",
+    "title": "The Road to Resilient Power: Bidirectional EV Charging's Impact on Texas C&I Infrastructure",
+    "summary": "Bidirectional EV charging holds immense promise for Texas's commercial and industrial grid resilience, despite current technological and cost challenges, signaling a future where fleet vehicles become critical grid assets.",
+    "content": "The concept of bidirectional electric vehicle (EV) charging, often referred to as Vehicle-to-Grid (V2G) or Vehicle-to-Everything (V2X), represents a pivotal advancement in energy management. For Texas, with its dynamic energy landscape and increasing demand on the ERCOT grid, the potential for EVs to act as distributed energy resources is transformative. While industry news highlights current obstacles such as elevated initial costs and the need for more complete technological solutions, experts universally agree that carefully designed utility programs and the next generation of advanced charging infrastructure will unlock significant value. This value extends not just to individual consumers but, more critically, to the overarching stability and resilience of the electrical grid, especially concerning the operational continuity of commercial and industrial facilities.\n\nFor our commercial and industrial clients across Texas, this evolving landscape presents both challenges and unparalleled opportunities. Implementing bidirectional charging requires a robust, intelligent electrical infrastructure capable of managing power flow in two directions, integrating seamlessly with building management systems, and interacting effectively with utility signals. AECweb understands that strategic adoption of V2G/V2X technology offers businesses the ability to monetize fleet assets, drastically reduce demand charges, provide critical backup power during grid events, and enhance overall operational resilience. As we move towards a future where fleet vehicles are not just transportation but mobile energy storage units, AECweb is poised to design, install, and maintain the sophisticated electrical systems required to harness this potential, ensuring our Texas industrial and commercial partners remain at the forefront of energy innovation and grid independence.",
+    "original_title": "What is holding back bidirectional EV charging as a grid resource?",
+    "image": "images/blog/post_547.jpg"
+  },
+  {
     "id": 546,
     "date": "Nov 25, 2026",
     "category": "Industrial Tech",
